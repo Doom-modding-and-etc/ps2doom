@@ -4,6 +4,31 @@
 #define _MIXER_MAXCHANNELS 8    // TBD
 #define _MIXER_BUFSIZE  960
 
+#include <kernel.h>
+#include <sjpcm.h>
+
+static sint16 mixbuffer_L[_MIXER_BUFSIZE] __attribute__((aligned (64)));
+static sint16 mixbuffer_R[_MIXER_BUFSIZE] __attribute__((aligned (64)));
+
+static int MIXER_BUFSIZE;
+
+//extern int ofs1;		// offset sample 1
+//extern int ofs2;
+//extern int sample1Size;
+//extern int sample2Size;
+//extern char* sample1;
+//extern char* sample2;
+
+//extern int m_mixer_playing;
+extern int count;
+
+static int debug1;
+
+extern sint16 *s1, *s2;
+static channel channels[_MIXER_MAXCHANNELS];
+
+int mixer_period = 1; // TBD
+
 typedef signed short sint16;
 typedef signed int sint32;
 

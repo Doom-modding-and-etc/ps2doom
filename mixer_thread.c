@@ -1,22 +1,8 @@
 /// Based on modplayer_thread.c
 
-#include <tamtypes.h>
-#include <ps2lib_err.h>
-#include <kernel.h>
-#include <sifrpc.h>
 
 #include "include/mixer_thread.h"
 #include "include/mixer.h"
-
-#define THREAD_STACK_SIZE	(8 * 1024)
-
-static int         thread_waitsema = -1;
-static u8          thread_stack[THREAD_STACK_SIZE] ALIGNED(16);
-static ee_thread_t thread_thread;
-static ee_sema_t   thread_playsema;
-static int         thread_threadid;
-
-extern s32 main_thread_id;
 
 ///
 void Mixer_StartThread()
