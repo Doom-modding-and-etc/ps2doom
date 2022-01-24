@@ -1209,7 +1209,7 @@ void checkForWadFile(char* wadname, char** foundwadfiles, char* foundfile, int* 
 {
     if ( !access (wadname, R_OK) )
     {
-        scr_printf("    %s\n", wadname);
+        scr_setCursor("    %s\n", wadname);
         *nWadsFound = *nWadsFound + 1;
 
         foundfile = malloc( strlen(wadname)+1 );
@@ -1362,7 +1362,7 @@ void IdentifyVersionAndSelect (void)        // cosmito
 
 
     /// start wad prompt
-    scr_printf("Point to a WAD with 'dpad Up' and 'dpad Up' and select with 'X' or 'O'\n");
+    scr_setCursor("Point to a WAD with 'dpad Up' and 'dpad Up' and select with 'X' or 'O'\n");
     
     int ymin = 6, nWadsFound = 0;
     int y = ymin;
@@ -1386,7 +1386,7 @@ void IdentifyVersionAndSelect (void)        // cosmito
     if (nWadsFound > 0)
     {
         scr_setXY(0,y);
-        scr_printf("->");
+        scr_setCursor("->");
 
         int butres = 0;
         u32 old_pad = 0;
@@ -1408,22 +1408,22 @@ void IdentifyVersionAndSelect (void)        // cosmito
             if(butres == PAD_UP)
             {
                 scr_setXY(0,y);
-                scr_printf("  ");
+                scr_setCursor("  ");
                 y--;
                 if(y < ymin)
                     y = ymin;
                 scr_setXY(0,y);
-                scr_printf("->");
+                scr_setCursor("->");
             }
             else if(butres == PAD_DOWN)
             {
                 scr_setXY(0,y);
-                scr_printf("  ");
+                scr_setCursor("  ");
                 y++;
                 if(y > ymax)
                     y = ymax;
                 scr_setXY(0,y);
-                scr_printf("->");
+                scr_setCursor("->");
             }
             else if(butres == PAD_CROSS || butres == PAD_CIRCLE)
             {
