@@ -307,16 +307,18 @@ void Display_screen()
     
     window = SDL_SetVideoMode(WIDTH, HEIGHT, BITS, SDL_NOFRAME);
 
+    SDL_Flip(window);
+    
+    printf("SDL1.2 Is not working properly", SDL_GetError());
+    //I_Error(); is not working properly when started on ps2
+    
+    
     SDL_BlitSurface( image, NULL, window, NULL );
     
     // Set window title
     SDL_WM_SetCaption("Display BMP", NULL);
 
-    SDL_Flip(window);
-    
     SDL_Delay(6000);
-    
-    SDL_ShowCursor(SDL_IGNORE);
     
     SDL_DisplayFormat(image);
     
