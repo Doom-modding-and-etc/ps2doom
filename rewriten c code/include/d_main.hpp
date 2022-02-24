@@ -14,37 +14,53 @@
 // FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
 // for more details.
 //
-// DESCRIPTION:
+// $Log:$
 //
-//    
+// DESCRIPTION:
+//	System specific interface stuff.
+//
 //-----------------------------------------------------------------------------
 
 
-#ifndef __M_RANDOM__
-#define __M_RANDOM__
+#ifndef __D_MAIN__
+#define __D_MAIN__
+
+#include "d_event.hpp"
+
+#ifdef __GNUG__
+#pragma interface
+#endif
+#define MAXWADFILES             20
+extern char*		wadfiles[MAXWADFILES];
 
 
-#include "doomtype.hpp"
-
-class Random
+class Main
 {
 public:
-    // Returns a number from 0 to 255,
-    // from a lookup table.
-    int M_Random(void);
 
-    // As M_Random, but used only by the play simulation.
-    int P_Random(void);
+void D_AddFile (char *file);
 
-    // Fix randoms for demos.
-    void M_ClearRandom (void);
+//
+// D_DoomMain()
+// Not a globally visible function, just included for source reference,
+// calls all startup code, parses command line options.
+// If not overrided by user input, calls N_AdvanceDemo.
+//
+void D_DoomMain (void);
+
+// Called by IO functions when input is detected.
+void D_PostEvent (event_t* ev);
+
+	
+
+//
+// BASE LEVEL
+//
+void D_PageTicker (void);
+void D_PageDrawer (void);
+void D_AdvanceDemo (void);
+void D_StartTitle (void);
 };
 
 
-
 #endif
-//-----------------------------------------------------------------------------
-//
-// $Log:$
-//
-//-----------------------------------------------------------------------------

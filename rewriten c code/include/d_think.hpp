@@ -15,39 +15,61 @@
 // for more details.
 //
 // DESCRIPTION:
-//	Cheat code checking.
+//  MapObj data. Map Objects or mobjs are actors, entities,
+//  thinker, take-your-pick... anything that moves, acts, or
+//  suffers state changes of more or less violent nature.
 //
 //-----------------------------------------------------------------------------
 
 
-#ifndef __M_CHEAT__
-#define __M_CHEAT__
+#ifndef __D_THINK__
+#define __D_THINK__
+
+
+#ifdef __GNUG__
+#pragma interface
+#endif
+
+
 
 //
-// CHEAT SEQUENCE PACKAGE
+// Experimental stuff.
+// To compile this as "ANSI C with classes"
+//  we will need to handle the various
+//  action functions cleanly.
 //
+typedef  void (*actionf_v)();
+typedef  void (*actionf_p1)( void* );
+typedef  void (*actionf_p2)( void*, void* );
 
-#define SCRAMBLE(a) \
-((((a)&1)<<7) + (((a)&2)<<5) + ((a)&4) + (((a)&8)<<1) \
- + (((a)&16)>>1) + ((a)&32) + (((a)&64)>>5) + (((a)&128)>>7))
-
-typedef struct
+typedef union
 {
-    unsigned char*	sequence;
-    unsigned char*	p;
-    
-} cheatseq_t;
+  actionf_p1	acp1;
+  actionf_v	acv;
+  actionf_p2	acp2;
 
-class cheat
+} actionf_t;
+
+
+
+
+
+// Historically, "think_t" is yet another
+//  function pointer to a routine to handle
+//  an actor.
+typedef actionf_t  think_t;
+
+
+// Doubly linked list of actors.
+typedef struct thinker_s
 {
-public:
-
-int cht_CheckCheat(cheatseq_t* cht, char key);
-
-
-void cht_GetParam(cheatseq_t* cht, char* buffer);
+    struct thinker_s*	prev;
+    struct thinker_s*	next;
+    think_t		function;
     
-};
+} thinker_t;
+
+
 
 #endif
 //-----------------------------------------------------------------------------

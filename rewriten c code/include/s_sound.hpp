@@ -35,62 +35,62 @@
 #ifdef __GNUG__
 #pragma interface
 #endif
-#include "sounds.h"
+#include "sounds.hpp"
+// killough 4/25/98: mask used to indicate sound origin is player item pickup
+#define PICKUP_SOUND (0x8000)
 
+class Sound
+{
+public:
 //
 // Initializes sound stuff, including volume
 // Sets channels, SFX and music volume,
 //  allocates channel buffer, sets S_sfx lookup.
 //
-void S_Init(int sfxVolume, int musicVolume);
+void Init(int sfxVolume, int musicVolume);
 
 //
 // Per level startup code.
 // Kills playing sounds at start of level,
 //  determines music if any, changes music.
 //
-void S_Start(void);
+void Start(void);
 
 //
 // Start sound for thing at <origin>
 //  using <sound_id> from sounds.h
 //
-void S_StartSound(void *origin, int sound_id);
-
-// Will start a sound at a given volume.
-void S_StartSoundAtVolume(void *origin, int sound_id, int volume);
-
-// killough 4/25/98: mask used to indicate sound origin is player item pickup
-#define PICKUP_SOUND (0x8000)
+void StartSound(void *origin, int sound_id);
 
 // Stop sound for thing at <origin>
-void S_StopSound(void* origin);
+void StopSound(void* origin);
 
 // Start music using <music_id> from sounds.h
-void S_StartMusic(int music_id);
+void StartMusic(int music_id);
 
 // Start music using <music_id> from sounds.h, and set whether looping
-void S_ChangeMusic(int music_id, int looping);
+void ChangeMusic(int music_id, int looping);
 
 // Stops the music fer sure.
-void S_StopMusic(void);
+void StopMusic(void);
 
 // Stop and resume music, during game PAUSE.
-void S_PauseSound(void);
-void S_ResumeSound(void);
+void PauseSound(void);
+void ResumeSound(void);
 
 //
 // Updates music & sounds
 //
-void S_UpdateSounds(void* listener);
-void S_SetMusicVolume(int volume);
-void S_SetSfxVolume(int volume);
+void UpdateSounds(void* listener);
+void SetMusicVolume(int volume);
 
-// machine-independent sound params
-extern int numChannels;
+private: 
+    // Will start a sound at a given volume.
+    void StartSoundAtVolume(void *origin, int sound_id, int volume);
+    
+    void SetSfxVolume(int volume);
 
-//jff 3/17/98 holds last IDMUS number, or -1
-extern int idmusnum;
+};
 
 typedef struct
 {

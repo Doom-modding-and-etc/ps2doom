@@ -28,21 +28,23 @@
 #include "m_fixed.hpp"
 
 
-// Bounding box coordinate storage.
-enum
+
+class Bbox
 {
+  public:
+  // Bounding box functions.
+  void ClearBox(fixed_t*	box);
+
+  void AddToBox(fixed_t* box, fixed_t x, fixed_t y);
+
+  // Bounding box coordinate storage.
+  enum BOX
+  {
     BOXTOP,
     BOXBOTTOM,
     BOXLEFT,
     BOXRIGHT
-};	// bbox coordinates
-class M 
-{
-  public:
-  // Bounding box functions.
-  void M_ClearBox(fixed_t*	box);
-
-  void M_AddToBox(fixed_t* box, fixed_t x, fixed_t y);
+  };	// bbox coordinates
 };
 
 #endif

@@ -15,31 +15,41 @@
 // for more details.
 //
 // DESCRIPTION:
+//  Intermission.
 //
-//    
 //-----------------------------------------------------------------------------
 
-#ifndef __M_MISC__
-#define __M_MISC__
+#ifndef __WI_STUFF__
+#define __WI_STUFF__
 
+//#include "v_video.h"
 
-#include "doomtype.hpp"
+#include "doomdef.hpp"
 
-class Misc
+// States for the intermission
+class WI
 {
-    bool WriteFile (char const* name, void* source, int length);
+public:
+ // Called by main loop, animate the intermission.
+ void Ticker(void);
 
-    int ReadFile(char const* name, byte**	buffer);
+ // Called by main loop,
+ // draws the intermission directly into the screen buffer.
+ void Drawer(void);
 
-    void ScreenShot(void);
+ // Setup for an intermission screen.
+ void Start(wbstartstruct_t*	 wbstartstruct);
+protected: 
+ typedef enum
+ {
+    NoState = -1,
+    StatCount,
+    ShowNextLoc
 
-    void LoadDefaults(void);
+ } stateenum_t;
 
-    void SaveDefaults(void);
-
-    int DrawText(int x, int	y, bool direct, char* string);
 };
-
+#endif
 //-----------------------------------------------------------------------------
 //
 // $Log:$

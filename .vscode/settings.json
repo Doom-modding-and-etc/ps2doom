@@ -100,6 +100,9 @@
         "sdl_main.h": "c",
         "m_fixed.h": "c",
         "libpad.h": "c",
-        "d_ticcmd.h": "c"
+        "d_ticcmd.h": "c",
+        "p_mobj.h": "c",
+        "tables.h": "c",
+        "d_think.h": "c"
     }
 }

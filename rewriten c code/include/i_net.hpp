@@ -7,7 +7,7 @@
 #endif
 
 // Called by D_DoomMain.
-class I
+class Net
 {
  void InitNetwork (void);
  void NetCmd (void);

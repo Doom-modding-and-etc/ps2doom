@@ -15,31 +15,37 @@
 // for more details.
 //
 // DESCRIPTION:
+//	System specific interface stuff.
 //
-//    
 //-----------------------------------------------------------------------------
 
-#ifndef __M_MISC__
-#define __M_MISC__
 
+#ifndef __D_TICCMD__
+#define __D_TICCMD__
 
 #include "doomtype.hpp"
 
-class Misc
+#ifdef __GNUG__
+#pragma interface
+#endif
+
+// The data sampled per tick (single player)
+// and transmitted to other peers (multiplayer).
+// Mainly movements/button commands per game tick,
+// plus a checksum for internal state consistency.
+typedef struct
 {
-    bool WriteFile (char const* name, void* source, int length);
+    char	forwardmove;	// *2048 for move
+    char	sidemove;	// *2048 for move
+    short	angleturn;	// <<16 for angle delta
+    short	consistancy;	// checks for net game
+    byte	chatchar;
+    byte	buttons;
+} ticcmd_t;
 
-    int ReadFile(char const* name, byte**	buffer);
 
-    void ScreenShot(void);
 
-    void LoadDefaults(void);
-
-    void SaveDefaults(void);
-
-    int DrawText(int x, int	y, bool direct, char* string);
-};
-
+#endif
 //-----------------------------------------------------------------------------
 //
 // $Log:$
