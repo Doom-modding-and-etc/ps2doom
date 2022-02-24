@@ -557,8 +557,7 @@ void I_ShutdownSound(void)
 }
 
 
-void
-I_InitSound()
+void I_InitSound()
 { 
   SDL_AudioSpec wanted;
   int i;

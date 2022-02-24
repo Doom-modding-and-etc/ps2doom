@@ -83,8 +83,6 @@ class wad
 
     void* CacheLumpNum (int lump, int tag);
     void* CacheLumpName (char* name, int tag);
-  
-
 };
 
 #endif
