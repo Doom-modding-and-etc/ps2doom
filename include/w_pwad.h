@@ -116,7 +116,5 @@ typedef struct
  int flags; //e6y
 } lumpinfo_t;
 
-
-
 extern lumpinfo_t *lumpinfo;
 extern int numlumps;

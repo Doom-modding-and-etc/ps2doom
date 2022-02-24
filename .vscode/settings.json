@@ -99,6 +99,7 @@
         "sdl_video.h": "c",
         "sdl_main.h": "c",
         "m_fixed.h": "c",
-        "libpad.h": "c"
+        "libpad.h": "c",
+        "d_ticcmd.h": "c"
     }
 }
