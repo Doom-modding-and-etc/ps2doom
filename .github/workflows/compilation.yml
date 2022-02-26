@@ -31,7 +31,7 @@ jobs:
 
     - name: Compile ps2doom 
       run: make all 
-     
+    
     - name: Get short SHA
       id: slug
       run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
@@ -42,3 +42,5 @@ jobs:
       with:
         name: ps2doom-${{ steps.slug.outputs.sha8 }}
         path: bin
+    - name: Compile rewrite 
+    run: cd rewritten && make all 

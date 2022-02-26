@@ -15,58 +15,41 @@
 // for more details.
 //
 // DESCRIPTION:
-//   Menu widget stuff, episode selection and such.
-//    
+//	Fixed point arithemtics, implementation.
+//
 //-----------------------------------------------------------------------------
 
+#ifndef __M_FIXED__
+#define __M_FIXED__
 
-#ifndef __M_MENU__
-#define __M_MENU__
+#ifdef __BEOS__
+#ifdef __GNUC__
+extern void *alloca(int);
+#else
+#include <alloca.h>
+#endif
+#endif /* __BEOS__ */
 
+//
+// Fixed point, 32bit as 16.16.
+//
+#define FRACBITS		16
+#define FRACUNIT		(1<<FRACBITS)
 
+typedef int fixed_t;
 
-#include "d_event.hpp"
-
-class Menu
+class Fixed
 {
 public:
-//
-// MENUS
-//
-// Called by main loop,
-// saves config file and calls I_Quit when user exits.
-// Even when the menu is not displayed,
-// this can resize the view and change game parameters.
-// Does all the real work of the menu interaction.
-boolean Responder(event_t *ev);
-
-
-// Called by main loop,
-// only used for menu (skull cursor) animation.
-void Ticker(void);
-
-// Called by main loop,
-// draws the menus directly into the screen buffer.
-void Drawer(void);
-
-// Called by D_DoomMain,
-// loads the config file.
-void Init(void);
-
-// Called by intro code to force menu up upon a keypress,
-// does nothing if menu is already up.
-void StartControlPanel(void);
-
-
-
-
+    fixed_t Mul(fixed_t a, fixed_t b);
+    fixed_t Div(fixed_t a, fixed_t b);
+    fixed_t Div2(fixed_t a, fixed_t b);
 };
 
 
+#endif 
 
 
-
-#endif    
 //-----------------------------------------------------------------------------
 //
 // $Log:$

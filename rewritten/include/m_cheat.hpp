@@ -42,10 +42,10 @@ class cheat
 {
 public:
 
-int cht_CheckCheat(cheatseq_t* cht, char key);
+int CheckCheat(cheatseq_t* cht, char key);
 
 
-void cht_GetParam(cheatseq_t* cht, char* buffer);
+void GetParam(cheatseq_t* cht, char* buffer);
     
 };
 

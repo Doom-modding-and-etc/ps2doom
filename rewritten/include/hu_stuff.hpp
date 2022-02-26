@@ -14,38 +14,54 @@
 // FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
 // for more details.
 //
-// DESCRIPTION:
-//    Nil.
-//    
+// DESCRIPTION:  Head up display
+//
 //-----------------------------------------------------------------------------
 
+#ifndef __HU_STUFF_H__
+#define __HU_STUFF_H__
 
-#ifndef __M_BBOX__
-#define __M_BBOX__
-
-#include "doomtype.hpp"
-
-#include "m_fixed.hpp"
+#include "d_event.hpp"
 
 
+//
+// Globally visible constants.
+//
+#define HU_FONTSTART	'!'	// the first font characters
+#define HU_FONTEND	'_'	// the last font characters
 
-class Bbox
+// Calculate # of glyphs in font.
+#define HU_FONTSIZE	(HU_FONTEND - HU_FONTSTART + 1)	
+
+#define HU_BROADCAST	5
+
+#define HU_MSGREFRESH	KEY_ENTER
+#define HU_MSGX		0
+#define HU_MSGY		0
+#define HU_MSGWIDTH	64	// in characters
+#define HU_MSGHEIGHT	1	// in lines
+
+#define HU_MSGTIMEOUT	(4*TICRATE)
+
+//
+// HEADS UP TEXT
+//
+class Heads_Up
 {
-  public:
-  // Bounding box functions.
-  void ClearBox(fixed_t*	box);
+public:
+void Init(void);
+void Start(void);
 
-  void AddToBox(fixed_t* box, fixed_t x, fixed_t y);
+bool Responder(event_t* ev);
 
-  // Bounding box coordinate storage.
-  enum BOX
-  {
-    BOXTOP,
-    BOXBOTTOM,
-    BOXLEFT,
-    BOXRIGHT
-  };	// bbox coordinates
+void Ticker(void);
+void Drawer(void);
+char dequeueChatChar(void);
+private:
+void Erase(void);
 };
+
+
 
 #endif
 //-----------------------------------------------------------------------------

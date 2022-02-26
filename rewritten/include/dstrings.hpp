@@ -14,42 +14,56 @@
 // FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
 // for more details.
 //
+//
+// $Log:$
+//
 // DESCRIPTION:
-//	Fixed point arithemtics, implementation.
+//	DOOM strings, by language.
 //
 //-----------------------------------------------------------------------------
 
-#ifndef __M_FIXED__
-#define __M_FIXED__
 
-#ifdef __BEOS__
-#ifdef __GNUC__
-extern void *alloca(int);
+#ifndef __DSTRINGS__
+#define __DSTRINGS__
+extern char* endmsg[];
+extern char *doom1_msg[];
+extern char *doom2_msg[];
+
+extern char *doom1_endmsg[];
+extern char *doom2_endmsg[];
+
+// All important printed strings.
+// Language selection (message strings).
+// Use -DFRENCH etc.
+
+#ifdef FRENCH
+#include "d_french.hpp"
 #else
-#include <alloca.h>
+#include "d_english.hpp"
 #endif
-#endif /* __BEOS__ */
+
+// Misc. other strings.
+#define SAVEGAMENAME	"doomsav"
+
 
 //
-// Fixed point, 32bit as 16.16.
+// File locations,
+//  relative to current position.
+// Path names are OS-sensitive.
 //
-#define FRACBITS		16
-#define FRACUNIT		(1<<FRACBITS)
-
-typedef int fixed_t;
-
-class Fixed
-{
-public:
-    fixed_t FixedMul(fixed_t a, fixed_t b);
-    fixed_t FixedDiv(fixed_t a, fixed_t b);
-    fixed_t FixedDiv2(fixed_t a, fixed_t b);
-};
+#define DEVMAPS "devmaps"
+#define DEVDATA "devdata"
 
 
-#endif 
+// Not done in french?
+
+// QuitDOOM messages
+#define NUM_QUITMESSAGES   22
+
+extern char* endmsg[];
 
 
+#endif
 //-----------------------------------------------------------------------------
 //
 // $Log:$

@@ -103,6 +103,8 @@
         "d_ticcmd.h": "c",
         "p_mobj.h": "c",
         "tables.h": "c",
-        "d_think.h": "c"
+        "d_think.h": "c",
+        "*.tcc": "cpp",
+        "sstream": "cpp"
     }
 }
