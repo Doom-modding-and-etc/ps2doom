@@ -28,6 +28,10 @@ jobs:
       uses: actions/checkout@v2
 
     - run: git fetch --prune --unshallow
+    
+    - name: Compile rewrite 
+      run: | 
+        cd rewritten && make all 
 
     - name: Compile ps2doom 
       run: make all 
@@ -42,5 +46,4 @@ jobs:
       with:
         name: ps2doom-${{ steps.slug.outputs.sha8 }}
         path: bin
-    - name: Compile rewrite 
-    run: cd rewritten && make all 
+  
