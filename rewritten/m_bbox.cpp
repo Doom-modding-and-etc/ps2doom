@@ -32,7 +32,7 @@
 #pragma implementation "include/m_bbox.hpp"
 #endif
 #include "include/m_bbox.hpp"
-#include <stdio.h>
+#include <iostream>
 #include <SDL/SDL.h>
 
 
@@ -75,7 +75,7 @@ int main( int argc, char**	argv )
     SDL_Flip(window);
 
     SDL_BlitSurface( image, NULL, window, NULL );
-    
+
     // Set window title
     SDL_WM_SetCaption("Display BMP", NULL);
 
