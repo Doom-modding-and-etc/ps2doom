@@ -23,25 +23,21 @@
 #ifndef __D_ENGLSH__
 #define __D_ENGLSH__
 #include <iostream>
-/*
-std::string devstrings = 
+
+
+namespace strings
 {
- "Developent mode ON.",
+ /*d_main.c*/
+ std::string devstrings = 
+ {
+  "Developent mode ON.",
+  "CD-ROM Version: default.cfg from c:\\doomdata\n" 
+ };
+}
 
-
-
-};
-*/
 //
 //	Printed strings for translation
 //
-
-//
-// D_Main.C
-//
-#define D_DEVSTR	"Development mode ON.\n"
-#define D_CDROM	"CD-ROM Version: default.cfg from c:\\doomdata\n"
-
 //
 //	M_Menu.C
 //

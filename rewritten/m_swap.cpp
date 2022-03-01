@@ -17,11 +17,8 @@
 // $Log:$
 //
 // DESCRIPTION:
-//	Main loop menu stuff.
-//	Random number LUT.
-//	Default Config File.
-//	PCX Screenshots.
-// 
+//	Endianess handling, swapping 16bit and 32bit.
+//
 // static const char rcsid[] = "$Id: m_bbox.c,v 1.1 1997/02/03 22:45:10 b1 Exp $";
 //-----------------------------------------------------------------------------
 
@@ -29,26 +26,24 @@
 
 
 #ifdef __GNUG__
-#pragma implementation "include/m_bbox.hpp"
+#pragma implementation "include/m_swap.hpp"
 #endif
-#include "include/m_bbox.hpp"
+#include "include/m_swap.hpp"
 
-void Bbox::ClearBox(fixed_t*	box)
+
+// Swap 16bit, that is, MSB and LSB byte.
+unsigned short SwapSHORT(unsigned short x)
 {
-    box[BOX::TOP] = box[BOX::RIGHT] = MININT;
-    box[BOX::BOTTOM] = box[BOX::LEFT] = MAXINT;
+    // No masking with 0xFF should be necessary. 
+    return (x>>8) | (x<<8);
 }
 
-void Bbox::AddToBox(fixed_t* box, fixed_t x, fixed_t y)
+// Swapping 32bit.
+unsigned long SwapLONG( unsigned long x)
 {
-    if (x<box[BOX::LEFT])
-	box[BOX::LEFT] = x;
-    else if (x>box[BOX::RIGHT])
-	box[BOX::RIGHT] = x;
-    if (y<box[BOX::BOTTOM])
-	box[BOX::BOTTOM] = y;
-    else if (y>box[BOX::TOP])
-	box[BOX::TOP] = y;
+    return
+	(x>>24)
+	| ((x>>8) & 0xff00)
+	| ((x<<8) & 0xff0000)
+	| (x<<24);
 }
-
-int main(int argc, char* argv[]){}
