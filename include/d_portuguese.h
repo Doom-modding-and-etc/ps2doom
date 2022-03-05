@@ -2,9 +2,8 @@
 //-----------------------------------------------------------------------------
 //
 // $Id:$
-//
-// Copyright (C) 1993-1996 by id Software, Inc.
-//
+// 
+// Copyricht (C) 2022 by André Guilherme
 // This source is available for distribution and/or modification
 // only under the terms of the DOOM Source Code License as
 // published by id Software. All rights reserved.
@@ -15,8 +14,8 @@
 // for more details.
 //
 // DESCRIPTION:
-//	Printed strings for translation.
-//	English language support (default).
+//	Printed strings for translation in 
+// brazilian portuguese language
 //
 //-----------------------------------------------------------------------------
 
@@ -24,13 +23,13 @@
 #define __D_PORTUGUESE__
 
 //
-//	Strings printadas para tradução
+//	frases printadas para tradução
 //
 
 //
 // d_main.c
 //
-#define D_DEVSTR	"Modo de desenvolvimento LIGADO.\n"
+#define D_DEVSTR	"Modo de Desenvolvimento LIGADO.\n"
 #define D_CDROM	"Versão de CD-ROM: default.cfg de c:\\doomdata\n"
 
 //
@@ -39,10 +38,10 @@
 #define PRESSKEY 	"aperte um botão."
 #define PRESSYN 	"aperte y ou n."
 #define QUITMSG	"tem certeza que você quer\nsair desse ótimo jogo?"
-#define LOADNET 	"você não pode carregat emquanto estiver em um jogo na rede local!\n\n"PRESSKEY
+#define LOADNET 	"você não pode carregar emquanto estiver em um jogo na rede local!\n\n"PRESSKEY
 #define QLOADNET	"você não pode carregar rápido durante um jogo na rede local!\n\n"PRESSKEY
 #define QSAVESPOT	"você ainda não pegou um slot de save rápido!\n\n"PRESSKEY
-#define SAVEDEAD 	"você nãk pode salvar enquanto não estiver jogando!\n\n"PRESSKEY
+#define SAVEDEAD 	"você não pode salvar enquanto não estiver jogando!\n\n"PRESSKEY
 #define QSPROMPT 	"desseja usar um save rápido em cima do seu jogo nomeado\n\n'%s'?\n\n"PRESSYN
 #define QLPROMPT	"você quer fazer um carregamento rápido do jogo nomeado\n\n'%s'?\n\n"PRESSYN
 
@@ -77,143 +76,143 @@
 //
 //	p_inter.c
 //
-#define GOTARMOR	"Picked up the armor."
-#define GOTMEGA	"Picked up the MegaArmor!"
-#define GOTHTHBONUS	"Picked up a health bonus."
-#define GOTARMBONUS	"Picked up an armor bonus."
-#define GOTSTIM	"Picked up a stimpack."
-#define GOTMEDINEED	"Picked up a medikit that you REALLY need!"
-#define GOTMEDIKIT	"Picked up a medikit."
-#define GOTSUPER	"Supercharge!"
+#define GOTARMOR	"Pegou uma armadura."
+#define GOTMEGA	"Pegou uma MegaArmadura!"
+#define GOTHTHBONUS	"Pegou um bônus de vida."
+#define GOTARMBONUS	"Pegou um bônus de armadura."
+#define GOTSTIM	"Pegou uma agulha."
+#define GOTMEDINEED	"Pegou um kit médico que você REALMENTE precisa!"
+#define GOTMEDIKIT	"Pegou um kit médico."
+#define GOTSUPER	"Supercarga!"
 
-#define GOTBLUECARD	"Picked up a blue keycard."
-#define GOTYELWCARD	"Picked up a yellow keycard."
-#define GOTREDCARD	"Picked up a red keycard."
-#define GOTBLUESKUL	"Picked up a blue skull key."
-#define GOTYELWSKUL	"Picked up a yellow skull key."
-#define GOTREDSKULL	"Picked up a red skull key."
+#define GOTBLUECARD	"Pegou um cartão azul."
+#define GOTYELWCARD	"Pegou um cartão amarelo."
+#define GOTREDCARD	"Pegou um cartão vermelho."
+#define GOTBLUESKUL	"Pegou uma chave craniana azul."
+#define GOTYELWSKUL	"Pegou uma chave craniana amarela."
+#define GOTREDSKULL	"Pegou uma chave craniana vermelha."
 
-#define GOTINVUL	"Invulnerability!"
+#define GOTINVUL	"Invulnerabilidade!"
 #define GOTBERSERK	"Berserk!"
-#define GOTINVIS	"Partial Invisibility"
-#define GOTSUIT	"Radiation Shielding Suit"
-#define GOTMAP	"Computer Area Map"
-#define GOTVISOR	"Light Amplification Visor"
-#define GOTMSPHERE	"MegaSphere!"
+#define GOTINVIS	"Invisibilidade parcial"
+#define GOTSUIT	"Traje de proteção a radiação"
+#define GOTMAP	"Mapa da area de computação"
+#define GOTVISOR	"Visor de ampliciação de luz"
+#define GOTMSPHERE	"MegaEsfera!"
 
-#define GOTCLIP	"Picked up a clip."
-#define GOTCLIPBOX	"Picked up a box of bullets."
-#define GOTROCKET	"Picked up a rocket."
-#define GOTROCKBOX	"Picked up a box of rockets."
-#define GOTCELL	"Picked up an energy cell."
-#define GOTCELLBOX	"Picked up an energy cell pack."
-#define GOTSHELLS	"Picked up 4 shotgun shells."
-#define GOTSHELLBOX	"Picked up a box of shotgun shells."
-#define GOTBACKPACK	"Picked up a backpack full of ammo!"
+#define GOTCLIP	"Pegou um pente."
+#define GOTCLIPBOX	"Pegou uma caixa de balas."
+#define GOTROCKET	"Pegou um míssil."
+#define GOTROCKBOX	"Pegou uma caixa de mísseis."
+#define GOTCELL	"Pegou uma célula de energia."
+#define GOTCELLBOX	"Pegou um pacote de célula de energia."
+#define GOTSHELLS	"Pegou 4 cartuchos de escopeta."
+#define GOTSHELLBOX	"Pegou uma caixa com cartuchos de escopeta."
+#define GOTBACKPACK	"Pegou uma mochila cheia de munição!"
 
-#define GOTBFG9000	"You got the BFG9000!  Oh, yes."
-#define GOTCHAINGUN	"You got the chaingun!"
-#define GOTCHAINSAW	"A chainsaw!  Find some meat!"
-#define GOTLAUNCHER	"You got the rocket launcher!"
-#define GOTPLASMA	"You got the plasma gun!"
-#define GOTSHOTGUN	"You got the shotgun!"
-#define GOTSHOTGUN2	"You got the super shotgun!"
-
-//
-// P_Doors.C
-//
-#define PD_BLUEO	"You need a blue key to activate this object"
-#define PD_REDO	"You need a red key to activate this object"
-#define PD_YELLOWO	"You need a yellow key to activate this object"
-#define PD_BLUEK	"You need a blue key to open this door"
-#define PD_REDK	"You need a red key to open this door"
-#define PD_YELLOWK	"You need a yellow key to open this door"
+#define GOTBFG9000	"Ah sim, Você pegou a BFG9000!"
+#define GOTCHAINGUN	"Você pegou uma metralhadora giratória!"
+#define GOTCHAINSAW	"Encontre alguma carne com a MOTOSERRA!"
+#define GOTLAUNCHER	"Você conseguiu um lançador de mísseis!"
+#define GOTPLASMA	"Você conseguiu uma arma de plasma!"
+#define GOTSHOTGUN	"Você pegou a escopeta!"
+#define GOTSHOTGUN2	"Você pegou a super escopeta!"
 
 //
-//	G_game.C
+// p_doors.c
 //
-#define GGSAVED	"game saved."
+#define PD_BLUEO	"Você precisa da chave azul para ativar este objeto"
+#define PD_REDO	"Você precisa da chave vermelha para ativar este objeto"
+#define PD_YELLOWO	"Você precisa de chave amarela para ativar este objeto"
+#define PD_BLUEK	"Você precisa da chave azul para abrir essa porta"
+#define PD_REDK	"Você precisa da chave vermelha para abrir essa porta"
+#define PD_YELLOWK	"Você precisa da chave amarela para abrir essa porta"
 
 //
-//	HU_stuff.C
+//	g_game.c
 //
-#define HUSTR_MSGU	"[Message unsent]"
+#define GGSAVED	"jogo salvo."
+
+//
+//	hu_stuff.c
+//
+#define HUSTR_MSGU	"[Mensagem não enviada]"
 
 #define HUSTR_E1M1	"E1M1: Hangar"
-#define HUSTR_E1M2	"E1M2: Nuclear Plant"
-#define HUSTR_E1M3	"E1M3: Toxin Refinery"
-#define HUSTR_E1M4	"E1M4: Command Control"
-#define HUSTR_E1M5	"E1M5: Phobos Lab"
-#define HUSTR_E1M6	"E1M6: Central Processing"
-#define HUSTR_E1M7	"E1M7: Computer Station"
-#define HUSTR_E1M8	"E1M8: Phobos Anomaly"
-#define HUSTR_E1M9	"E1M9: Military Base"
+#define HUSTR_E1M2	"E1M2: Usina Nuclear"
+#define HUSTR_E1M3	"E1M3: Refinaria de toxina"
+#define HUSTR_E1M4	"E1M4: Controle de comando"
+#define HUSTR_E1M5	"E1M5: Laborátorio de phobos"
+#define HUSTR_E1M6	"E1M6: Central de processamento"
+#define HUSTR_E1M7	"E1M7: Estação de pomputação"
+#define HUSTR_E1M8	"E1M8: Anomália de Phobos"
+#define HUSTR_E1M9	"E1M9: Base Militar"
 
-#define HUSTR_E2M1	"E2M1: Deimos Anomaly"
-#define HUSTR_E2M2	"E2M2: Containment Area"
-#define HUSTR_E2M3	"E2M3: Refinery"
-#define HUSTR_E2M4	"E2M4: Deimos Lab"
-#define HUSTR_E2M5	"E2M5: Command Center"
-#define HUSTR_E2M6	"E2M6: Halls of the Damned"
-#define HUSTR_E2M7	"E2M7: Spawning Vats"
-#define HUSTR_E2M8	"E2M8: Tower of Babel"
-#define HUSTR_E2M9	"E2M9: Fortress of Mystery"
+#define HUSTR_E2M1	"E2M1: Anomália de Deimos"
+#define HUSTR_E2M2	"E2M2: Área de Contenção"
+#define HUSTR_E2M3	"E2M3: Refinária"
+#define HUSTR_E2M4	"E2M4: Láboratório de Deimos"
+#define HUSTR_E2M5	"E2M5: Centro de comando"
+#define HUSTR_E2M6	"E2M6: Corredoores dos Amaldiçoados"
+#define HUSTR_E2M7	"E2M7: Aparições de Cubas"
+#define HUSTR_E2M8	"E2M8: Torre De Babel"
+#define HUSTR_E2M9	"E2M9: Fortaleza do Mistério"
 
-#define HUSTR_E3M1	"E3M1: Hell Keep"
-#define HUSTR_E3M2	"E3M2: Slough of Despair"
+#define HUSTR_E3M1	"E3M1: Guarda do Inferno"
+#define HUSTR_E3M2	"E3M2: Desmoronamento do Desespero"
 #define HUSTR_E3M3	"E3M3: Pandemonium"
-#define HUSTR_E3M4	"E3M4: House of Pain"
-#define HUSTR_E3M5	"E3M5: Unholy Cathedral"
+#define HUSTR_E3M4	"E3M4: Casa do Sofrimento"
+#define HUSTR_E3M5	"E3M5: Catedral Impiedosa"
 #define HUSTR_E3M6	"E3M6: Mt. Erebus"
 #define HUSTR_E3M7	"E3M7: Limbo"
 #define HUSTR_E3M8	"E3M8: Dis"
 #define HUSTR_E3M9	"E3M9: Warrens"
 
-#define HUSTR_E4M1	"E4M1: Hell Beneath"
-#define HUSTR_E4M2	"E4M2: Perfect Hatred"
-#define HUSTR_E4M3	"E4M3: Sever The Wicked"
-#define HUSTR_E4M4	"E4M4: Unruly Evil"
-#define HUSTR_E4M5	"E4M5: They Will Repent"
-#define HUSTR_E4M6	"E4M6: Against Thee Wickedly"
-#define HUSTR_E4M7	"E4M7: And Hell Followed"
-#define HUSTR_E4M8	"E4M8: Unto The Cruel"
-#define HUSTR_E4M9	"E4M9: Fear"
+#define HUSTR_E4M1	"E4M1: Inferno Abaixo"
+#define HUSTR_E4M2	"E4M2: O perfeito ódio"
+#define HUSTR_E4M3	"E4M3: Sever o Malvado"
+#define HUSTR_E4M4	"E4M4: O mal sem rumo"
+#define HUSTR_E4M5	"E4M5: Eles irão se Arrepender"
+#define HUSTR_E4M6	"E4M6: Contra o Ti Perverso"
+#define HUSTR_E4M7	"E4M7: E o Inferno Seguiu"
+#define HUSTR_E4M8	"E4M8: Dentro do Cruel"
+#define HUSTR_E4M9	"E4M9: Medo"
 
-#define HUSTR_1	"level 1: entryway"
-#define HUSTR_2	"level 2: underhalls"
-#define HUSTR_3	"level 3: the gantlet"
-#define HUSTR_4	"level 4: the focus"
-#define HUSTR_5	"level 5: the waste tunnels"
-#define HUSTR_6	"level 6: the crusher"
-#define HUSTR_7	"level 7: dead simple"
-#define HUSTR_8	"level 8: tricks and traps"
-#define HUSTR_9	"level 9: the pit"
-#define HUSTR_10	"level 10: refueling base"
-#define HUSTR_11	"level 11: 'o' of destruction!"
-
-#define HUSTR_12	"level 12: the factory"
-#define HUSTR_13	"level 13: downtown"
+#define HUSTR_1	"nível 1: entrada"
+#define HUSTR_2	"nível 2: abaixo dos corredores"
+#define HUSTR_3	"nível 3: a manopola"
+#define HUSTR_4	"nível 4: o foco"
+#define HUSTR_5	"nível 5: os túneis de descarte"
+#define HUSTR_6	"nível 6: o esmagador"
+#define HUSTR_7	"nível 7: morte simples"
+#define HUSTR_8	"nível 8: manobras e armadilhas"
+#define HUSTR_9	"nível 9: o poço"
+#define HUSTR_10	"nível 10: base de recarga"
+#define HUSTR_11	"nível 11: 'd' de destruição!"
+//
+#define HUSTR_12	"nível 12: A fábrica"
+#define HUSTR_13	"level 13: cidade"
 #define HUSTR_14	"level 14: the inmost dens"
-#define HUSTR_15	"level 15: industrial zone"
-#define HUSTR_16	"level 16: suburbs"
-#define HUSTR_17	"level 17: tenements"
-#define HUSTR_18	"level 18: the courtyard"
-#define HUSTR_19	"level 19: the citadel"
-#define HUSTR_20	"level 20: gotcha!"
+#define HUSTR_15	"level 15: zona industrial"
+#define HUSTR_16	"level 16: súburbios"
+#define HUSTR_17	"level 17: cortiços"
+#define HUSTR_18	"level 18: o pátio"
+#define HUSTR_19	"level 19: a cidadela"
+#define HUSTR_20	"level 20: peguei você!"
 
 #define HUSTR_21	"level 21: nirvana"
-#define HUSTR_22	"level 22: the catacombs"
-#define HUSTR_23	"level 23: barrels o' fun"
-#define HUSTR_24	"level 24: the chasm"
-#define HUSTR_25	"level 25: bloodfalls"
-#define HUSTR_26	"level 26: the abandoned mines"
-#define HUSTR_27	"level 27: monster condo"
-#define HUSTR_28	"level 28: the spirit world"
-#define HUSTR_29	"level 29: the living end"
-#define HUSTR_30	"level 30: icon of sin"
+#define HUSTR_22	"level 22: as catacumbas"
+#define HUSTR_23	"level 23: barris de diversão"
+#define HUSTR_24	"level 24: o chasm"
+#define HUSTR_25	"level 25: queda de sangue"
+#define HUSTR_26	"level 26: as minas abandonadas"
+#define HUSTR_27	"level 27: condo monstruoso"
+#define HUSTR_28	"level 28: o mundo espiritual"
+#define HUSTR_29	"level 29: o final vivo"
+#define HUSTR_30	"level 30: ícone do pecado"
 
 #define HUSTR_31	"level 31: wolfenstein"
-#define HUSTR_32	"level 32: grosse"
+#define HUSTR_32	"level 32: nojeira"
 
 #define PHUSTR_1	"level 1: congo"
 #define PHUSTR_2	"level 2: well of souls"
@@ -287,32 +286,32 @@
 #define THUSTR_31	"level 31: pharaoh"
 #define THUSTR_32	"level 32: caribbean"
 
-#define HUSTR_CHATMACRO1	"I'm ready to kick butt!"
-#define HUSTR_CHATMACRO2	"I'm OK."
-#define HUSTR_CHATMACRO3	"I'm not looking too good!"
-#define HUSTR_CHATMACRO4	"Help!"
-#define HUSTR_CHATMACRO5	"You suck!"
-#define HUSTR_CHATMACRO6	"Next time, scumbag..."
-#define HUSTR_CHATMACRO7	"Come here!"
-#define HUSTR_CHATMACRO8	"I'll take care of it."
-#define HUSTR_CHATMACRO9	"Yes"
-#define HUSTR_CHATMACRO0	"No"
+#define HUSTR_CHATMACRO1	"Eu estou pronto para foder!"
+#define HUSTR_CHATMACRO2	"Eu estou bem."
+#define HUSTR_CHATMACRO3	"Me parece que eu não estou muito bem!"
+#define HUSTR_CHATMACRO4	"Ajuda!"
+#define HUSTR_CHATMACRO5	"Você é chato!"
+#define HUSTR_CHATMACRO6	"Na próxima vez, seu merda..."
+#define HUSTR_CHATMACRO7	"Venha cá!"
+#define HUSTR_CHATMACRO8	"Eu vou cuidar disso."
+#define HUSTR_CHATMACRO9	"Sim"
+#define HUSTR_CHATMACRO0	"Não"
 
-#define HUSTR_TALKTOSELF1	"You mumble to yourself"
-#define HUSTR_TALKTOSELF2	"Who's there?"
-#define HUSTR_TALKTOSELF3	"You scare yourself"
-#define HUSTR_TALKTOSELF4	"You start to rave"
-#define HUSTR_TALKTOSELF5	"You've lost it..."
+#define HUSTR_TALKTOSELF1	"Você resmunga para si mesmo"
+#define HUSTR_TALKTOSELF2	"Quem está aí?"
+#define HUSTR_TALKTOSELF3	"Você assusta a si mesmo"
+#define HUSTR_TALKTOSELF4	"Você começa a delirar"
+#define HUSTR_TALKTOSELF5	"Você ficou louco..."
 
-#define HUSTR_MESSAGESENT	"[Message Sent]"
+#define HUSTR_MESSAGESENT	"[Mensagem enviada]"
 
 // The following should NOT be changed unless it seems
 // just AWFULLY necessary
 
-#define HUSTR_PLRGREEN	"Green: "
+#define HUSTR_PLRGREEN	"Verde: "
 #define HUSTR_PLRINDIGO	"Indigo: "
-#define HUSTR_PLRBROWN	"Brown: "
-#define HUSTR_PLRRED		"Red: "
+#define HUSTR_PLRBROWN	"Marrom: "
+#define HUSTR_PLRRED		"Vermelho: "
 
 #define HUSTR_KEYGREEN	'g'
 #define HUSTR_KEYINDIGO	'i'
@@ -320,41 +319,41 @@
 #define HUSTR_KEYRED	'r'
 
 //
-//	AM_map.C
+//	am_map.c
 //
 
-#define AMSTR_FOLLOWON	"Follow Mode ON"
-#define AMSTR_FOLLOWOFF	"Follow Mode OFF"
+#define AMSTR_FOLLOWON	"Modo De Seguir LIGADO"
+#define AMSTR_FOLLOWOFF	"Modo De Seguir DESLIGADO"
 
-#define AMSTR_GRIDON	"Grid ON"
-#define AMSTR_GRIDOFF	"Grid OFF"
+#define AMSTR_GRIDON	"Grid LIGADA"
+#define AMSTR_GRIDOFF	"Grid DESLIGADA"
 
-#define AMSTR_MARKEDSPOT	"Marked Spot"
-#define AMSTR_MARKSCLEARED	"All Marks Cleared"
-
-//
-//	ST_stuff.C
-//
-
-#define STSTR_MUS		"Music Change"
-#define STSTR_NOMUS		"IMPOSSIBLE SELECTION"
-#define STSTR_DQDON		"Degreelessness Mode On"
-#define STSTR_DQDOFF	"Degreelessness Mode Off"
-
-#define STSTR_KFAADDED	"Very Happy Ammo Added"
-#define STSTR_FAADDED	"Ammo (no keys) Added"
-
-#define STSTR_NCON		"No Clipping Mode ON"
-#define STSTR_NCOFF		"No Clipping Mode OFF"
-
-#define STSTR_BEHOLD	"inVuln, Str, Inviso, Rad, Allmap, or Lite-amp"
-#define STSTR_BEHOLDX	"Power-up Toggled"
-
-#define STSTR_CHOPPERS	"... doesn't suck - GM"
-#define STSTR_CLEV		"Changing Level..."
+#define AMSTR_MARKEDSPOT	"Lugar marcado"
+#define AMSTR_MARKSCLEARED	"Todas as marcações limpas"
 
 //
-//	F_Finale.C
+//	st_stuff.c
+//
+
+#define STSTR_MUS		"Mudança de Música"
+#define STSTR_NOMUS		"SELEÇÃO IMPÓSSIVEL"
+#define STSTR_DQDON		"Modo Degreelessness Ligado"
+#define STSTR_DQDOFF	"Modo Degreelessness Desligado"
+
+#define STSTR_KFAADDED	"Munição muito feliz adicionada"
+#define STSTR_FAADDED	"Munição (sem chaves) Adicionada"
+
+#define STSTR_NCON		"Modo Sem Corte LIGADO"
+#define STSTR_NCOFF		"Modo Sem Corte DESLIGADO"
+
+#define STSTR_BEHOLD	"inVuln, Str, Inviso, Rad, Allmap, ou Lite-amp"
+#define STSTR_BEHOLDX	"Ligar pressionado"
+
+#define STSTR_CHOPPERS	"... não seja ruim - GM"
+#define STSTR_CLEV		"Mudando nível..."
+
+//
+//	f_finale.c
 //
 #define E1TEXT \
 "Once you beat the big badasses and\n"\
@@ -672,25 +671,25 @@
 
 
 //
-// Character cast strings F_FINALE.C
+// Character cast strings f_finale.c
 //
-#define CC_ZOMBIE	"ZOMBIEMAN"
-#define CC_SHOTGUN	"SHOTGUN GUY"
-#define CC_HEAVY	"HEAVY WEAPON DUDE"
+#define CC_ZOMBIE	"HOMEM ZUMBI"
+#define CC_SHOTGUN	"CAMARADA DA ESCOPETA"
+#define CC_HEAVY	"MANO DA ARMA PESADA"
 #define CC_IMP	"IMP"
-#define CC_DEMON	"DEMON"
-#define CC_LOST	"LOST SOUL"
-#define CC_CACO	"CACODEMON"
-#define CC_HELL	"HELL KNIGHT"
-#define CC_BARON	"BARON OF HELL"
+#define CC_DEMON	"DEMÔNIO"
+#define CC_LOST	"ALMA PERDIDA"
+#define CC_CACO	"CACODEMÔNIO"
+#define CC_HELL	"CAVALEIRO INFERNAL"
+#define CC_BARON	"BARÃO DO INFERNO"
 #define CC_ARACH	"ARACHNOTRON"
-#define CC_PAIN	"PAIN ELEMENTAL"
+#define CC_PAIN	"DOR ELEMENTAL"
 #define CC_REVEN	"REVENANT"
 #define CC_MANCU	"MANCUBUS"
 #define CC_ARCH	"ARCH-VILE"
-#define CC_SPIDER	"THE SPIDER MASTERMIND"
-#define CC_CYBER	"THE CYBERDEMON"
-#define CC_HERO	"OUR HERO"
+#define CC_SPIDER	"A ARANHA MESTRE"
+#define CC_CYBER	"O CYBERDEMÔNIO"
+#define CC_HERO	"NOSSO HERÓI"
 
 
 #endif
