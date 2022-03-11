@@ -1,13 +1,10 @@
-#include <tamtypes.h>
-#include <stdio.h>
 #include <kernel.h>
-#include <tcpip.h>
 #include <math.h>
+#include <stdio.h>
+#include <tamtypes.h>
+#include <tcpip.h>
 
-extern double pow (double a, double b)
-{
-	return powf(a,b);
-}
+extern double pow(double a, double b) { return powf(a, b); }
 
 /**************************************************
 ***************************************************
@@ -17,4 +14,3 @@ extern double pow (double a, double b)
 **}                                              **
 ***************************************************
 ***************************************************/
-
