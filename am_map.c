@@ -695,8 +695,9 @@ AM_Responder
 	    plr->message = AMSTR_MARKSCLEARED;
 	    break;
 	  default:
-	    cheatstate=0;
+	    cheatstate = 0;
 	    rc = false;
+		return cheatstate;
 	}
 	if (!deathmatch && cht_CheckCheat(&cheat_amap, ev->data1))
 	{

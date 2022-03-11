@@ -41,7 +41,6 @@
 
 #define MAX_PARTITIONS   100
 
-static char s_pUDNL   [] __attribute__(   (  section( ".data" ), aligned( 1 )  )   ) = "rom0:UDNL rom0:EELOADCNF";
 
 // cosmitoMixer
 #include <sifrpc.h>
@@ -185,7 +184,7 @@ char config_probestring[200];
 
 const char *hdd_wads_folder;
 
-int getFileSize(int fd) 
+int getFileSize(FILE *fd) 
 {
 	int size = fseek(fd, 0, SEEK_END);
 	fseek(fd, 0, SEEK_SET);
@@ -203,11 +202,6 @@ void Display_mode()
     #define NTSC_BITS 32
 
     int forceDisplayMode = -1;
-    int argc; 
-    char** argv; 
-
-    myargc = argc; 
-    myargv = argv; 
     
     SDL_Surface *PAL;
     SDL_Surface *NTSC;
@@ -240,7 +234,7 @@ void Display_mode()
     }
 
     // Changes accordingly to filename
-    forceDisplayMode = getDisplayModeFromELFName(argv);
+    forceDisplayMode = getDisplayModeFromELFName(myargv);
     if (forceDisplayMode != -1)
         PS2SDL_ForceSignal(forceDisplayMode);
 
@@ -260,12 +254,11 @@ void Display_mode()
     }
     D_DoomMain (); 
 
-    return 0;
+
 }
 
 void Display_screen()
 {
-
     //Todo: figure out whats going on the SDL1 cursor 
     #define WIDTH 640
     #define HEIGHT 448
@@ -563,16 +556,16 @@ int main( int argc, char**	argv )
     int mc_Type, mc_Free, mc_Format;
     static char hddarg[] = "-o" "\0" "4" "\0" "-n" "\0" "20";
     static char pfsarg[] = "-m" "\0" "4" "\0" "-o" "\0" "10" "\0" "-n" "\0" "40";
-    int mountErr = 0;
     const char *hdd_path_to_partition;
     use_hdd = CONFIG_FALSE;
-    int handle;
+    FILE *handle;
     myargc = argc; 
     myargv = argv; 
     s32 main_thread_id;
     int x;
     int swap_analogsticks;
     int configLoadSuccess = 0;
+    int value;
     GetElfFilename(argv[0], deviceName, fullPath, elfFilename);
     main_thread_id = GetThreadId();
     
@@ -582,7 +575,8 @@ int main( int argc, char**	argv )
 
     /********************************************************* 
     **********************************************************    
-    ** todo: init_scr();                                    **
+    ** todo:                                                **
+    ** init_scr();                                          **
     ** scr_printf("--==== PS2DOOM v1.0.6.0 ====--\n\n\n");  **
     ** scr_clear();                                         **
     **********************************************************
@@ -677,8 +671,9 @@ int main( int argc, char**	argv )
                 {
                     if(strcmp(config_actions[j].name, config_buttons[i].defaultaction) == 0)
                     {
-                        int value = config_actions[j].value;
+                        value = config_actions[j].value;
                         //config_buttons[i] = value;
+                        return value;
                     }
                 }      
             }
@@ -719,8 +714,9 @@ int main( int argc, char**	argv )
                     {
                         if(strcmp(config_actions[j].name, s) == 0)
                         {
-                            int value = config_actions[j].value;
+                            value = config_actions[j].value;
                             //config_buttons[i] = value;
+                            return value;
                         }
                     }      
                 }
@@ -738,7 +734,6 @@ int main( int argc, char**	argv )
         
         else
         {
-            
             use_hdd = CONFIG_FALSE;
             printf("NOT FOUND %s\n", config_probestring);
         }

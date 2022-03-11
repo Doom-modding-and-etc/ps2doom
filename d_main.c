@@ -101,7 +101,7 @@ void D_DoomLoop (void);
 
 
 char*		wadfiles[MAXWADFILES];
-char*           iwadfile;
+char*       iwadfile;
 
 boolean		devparm;	// started game with -devparm
 boolean         nomonsters;	// checkparm of -nomonsters
@@ -155,7 +155,8 @@ int 		eventtail;
 void D_PostEvent (event_t* ev)
 {
     events[eventhead] = *ev;
-    eventhead = (++eventhead)&(MAXEVENTS-1);
+    eventhead = MAXEVENTS-1;
+    ++eventhead;
 }
 
 
@@ -172,12 +173,13 @@ void D_ProcessEvents (void)
 	 && (W_CheckNumForName("map01")<0) )
       return;
 	
-    for ( ; eventtail != eventhead ; eventtail = (++eventtail)&(MAXEVENTS-1) )
+    for (; eventtail != eventhead ; eventtail = MAXEVENTS-1 ) 
     {
-	ev = &events[eventtail];
-	if (M_Responder (ev))
+	 ev = &events[eventtail];
+	 if (M_Responder (ev))
 	    continue;               // menu ate the event
-	G_Responder (ev);
+	 G_Responder (ev);
+     eventtail++;
     }
 }
 
@@ -1326,11 +1328,13 @@ void D_DoomMain (void)
 
     if (file)
     {
-	// the parms after p are wadfile/lump names,
-	// until end of parms or another - preceded parm
-	modifiedgame = true;            // homebrew levels
-	while (++p != myargc && myargv[p][0] != '-')
+	 // the parms after p are wadfile/lump names,
+	 // until end of parms or another - preceded parm
+	 modifiedgame = true;            // homebrew levels
+	 while (++p != myargc && myargv[p][0] != '-')
+     {
 	    D_AddFile (myargv[p]);
+     }
     }
     
 
@@ -1448,13 +1452,12 @@ void D_DoomMain (void)
     if (modifiedgame)
     {
 	/*m*/printf 
-    (
-	"===========================================================================\n"
+    ("===========================================================================\n"
 	"     PS2DOOM is free software, covered by the DOOM Source Code\n               "
-  "     License. However WITHOUT ANY WARRANTY even the implied warranty of      "
-  "     FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License for more details.\n"
-  "     You are welcome to change and distribute but you can´t sell comercially.\n"
-  "     See the License for more information.\n                                    "                                                                 
+    "     License. However WITHOUT ANY WARRANTY even the implied warranty of      "
+    "     FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License for more details.\n"
+    "     You are welcome to change and distribute but you can´t sell comercially.\n"
+    "     See the License for more information.\n                                    "                                                                 
 	"=============================================================================\n");
 	
     getchar ();
@@ -1465,21 +1468,24 @@ void D_DoomMain (void)
     {
       case shareware:
       case indetermined:
-	printf (
-	    "===========================================================================\n"
-	    "                                Open source!\n"
-	    "===========================================================================\n"
+	printf 
+    (
+    "===========================================================================\n"
+    "                                Open source!\n"
+	"===========================================================================\n"
     );
 	break;
       case registered:
       case retail:
       case commercial:
-	printf (
-	    "===========================================================================\n"
-	    "         Open source product - you can do distributions or modify the code!\n"
-	    "         However you cannot comercialy sell the product                      "
-        "         as in the terms of the DOOM Source Code License\n                   "
-	    "===========================================================================\n");
+	printf 
+    (
+	"===========================================================================\n"
+	"         Open source product - you can do distributions or modify the code!\n"
+	"         However you cannot comercialy sell the product                      "
+    "         as in the terms of the DOOM Source Code License\n                   "
+    "===========================================================================\n"
+    );
 	break;
 	
       default:

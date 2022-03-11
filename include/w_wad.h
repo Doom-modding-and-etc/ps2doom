@@ -68,14 +68,7 @@ extern	lumpinfo_t*	lumpinfo;
 extern	int		numlumps;
 
 
-static struct
-{
-  void *cache;
-#ifdef TIMEDIAG
-  int locktic;
-#endif
-  int locks;
-} *cachelump;
+
 
 void    W_InitMultipleFiles (char** filenames);
 void    W_Reload (void);

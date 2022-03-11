@@ -1695,21 +1695,26 @@ boolean M_Responder (event_t* ev)
 
     default:
         for (i = itemOn+1;i < currentMenu->numitems;i++)
+        {
             if (currentMenu->menuitems[i].alphaKey == ch)
             {
                 itemOn = i;
                 S_StartSound(NULL,sfx_pstop);
                 return true;
             }
+            
             for (i = 0;i <= itemOn;i++)
+            {
                 if (currentMenu->menuitems[i].alphaKey == ch)
                 {
                     itemOn = i;
                     S_StartSound(NULL,sfx_pstop);
                     return true;
                 }
-                break;
-
+                
+            }
+        }
+        break;        
     }
 
     return false;

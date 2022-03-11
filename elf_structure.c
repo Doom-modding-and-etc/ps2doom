@@ -4,22 +4,22 @@
 #include <libcdvd-common.h>
 
 typedef struct
- {
-     u8 ident[16];  // struct definition for ELF object header
-     u16 type;
-     u16 machine;
-     u32 version;
-     u32 entry;
-     u32 phoff;
-     u32 shoff;
-     u32 flags;
-     u16 ehsize;
-     u16 phentsize;
-     u16 phnum;
-     u16 shentsize;
-     u16 shnum;
-     u16 shstrndx;
- } elf_header_t;
+{
+    u8 ident[16];  // struct definition for ELF object header
+    u16 type;
+    u16 machine;
+    u32 version;
+    u32 entry;
+    u32 phoff;
+    u32 shoff;
+    u32 flags;
+    u16 ehsize;
+    u16 phentsize;
+    u16 phnum;
+    u16 shentsize;
+    u16 shnum;
+    u16 shstrndx;
+} elf_header_t;
   
  typedef struct
  {

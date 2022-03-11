@@ -10,6 +10,16 @@
 #include "include/w_wad.h"
 #include <string.h>
 
+static struct
+{
+  void *cache;
+#ifdef TIMEDIAG
+  int locktic;
+#endif
+  int locks;
+} *cachelump;
+
+
 /*******************************************************************************
 ******************************************************************************** 
 ** const void* W_LockLumpNum(int lump);                                       **
@@ -19,6 +29,7 @@
 ** instead of returning a pointer into the memory mapped area                 **
 ********************************************************************************
 ********************************************************************************/
+
 const void* W_LockLumpNum(int lump)
 {
   size_t len = W_LumpLength(lump);

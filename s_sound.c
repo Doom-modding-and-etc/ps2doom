@@ -133,7 +133,7 @@ void S_Init(int sfxVolume, int musicVolume)
 		// (the maximum numer of sounds rendered
 		// simultaneously) within zone memory.
 		// CPhipps - calloc
-	 typedef channel_t channels;
+	 //typedef channel_t channels;
 
 	//Z_Malloc(numChannels, sizeof(channels), 0);
 
@@ -235,7 +235,7 @@ void S_StartSoundAtVolume(void *origin_p, int sfx_id, int volume)
 	if (sfx->link)
 	{
 		pitch = sfx->pitch;
-		priority = sfx->priority;
+//		priority = sfx->priority;
 		volume += sfx->volume;
 
 		if (volume < 1)
@@ -279,6 +279,7 @@ void S_StartSoundAtVolume(void *origin_p, int sfx_id, int volume)
 
 	// kill old sound
 	for(cnum=0; cnum<numChannels; cnum++)
+	{
 		if (channels[cnum].sfxinfo && channels[cnum].origin == origin && channels[cnum].is_pickup == is_pickup)
 		{
 			S_StopChannel(cnum);
@@ -302,6 +303,7 @@ void S_StartSoundAtVolume(void *origin_p, int sfx_id, int volume)
 
 		// Assigns the handle to one of the channels in the mix/output buffer.
 		channels[cnum].handle = I_StartSound(sfx_id, volume, sep, pitch, priority);
+	}
 }
 
 void S_StartSound(void *origin, int sfx_id)

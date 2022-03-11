@@ -46,8 +46,6 @@
 
 
 
-
-
 //
 // GLOBALS
 //
@@ -287,7 +285,7 @@ void W_InitMultipleFiles (char** filenames)
     {
         //scr_clear();
         //scr_printf ("\n\nERROR at W_InitFiles: no files found\n\n");
-        printf (" Put a .WAD file along with PS2Doom.elf before running it or check if HDD paths are correct at ps2doom.config.\n\n");
+        printf(" Put a .WAD file along with PS2Doom.elf before running it or check if HDD paths are correct at ps2doom.config.\n\n");
         //SleepThread();
         
     }
@@ -480,7 +478,7 @@ W_ReadLump
 	// ps2_fseek (handle, l->position, SEEK_SET);
     //   c = ps2_fread (dest, 1, l->size, handle);
 
-    fseek (handle, l->position, SEEK_SET);
+    fseek(handle, l->position, SEEK_SET);
     c = fread (dest, 1, l->size, handle);
 	
 
