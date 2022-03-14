@@ -40,7 +40,6 @@
 #include <unistd.h>
 #define MAX_PARTITIONS   100
 
-
 // cosmitoMixer
 #include <sifrpc.h>
 #include <mixer/mixer.h>
