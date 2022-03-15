@@ -40,7 +40,6 @@
 #include <unistd.h>
 #define MAX_PARTITIONS   100
 
-
 // cosmitoMixer
 #include <sifrpc.h>
 #include <mixer/mixer.h>
@@ -262,7 +261,9 @@ void Display_screen()
     #define WIDTH 640
     #define HEIGHT 448
     #define BITS 32
-  
+    
+    SDL_Init(SDL_INIT_VIDEO);
+
     SDL_Surface *image;
   
     SDL_Surface *window;
@@ -583,7 +584,7 @@ int main( int argc, char**	argv )
     
     printf("sample: kicking IRXs\n");
 	
-    ret = SifExecModuleBuffer(freesd, size_freesd, 0, NULL, &ret);
+    SifExecModuleBuffer(freesd, size_freesd, 0, NULL, NULL);
 	printf("freesd loadmodule %d\n", ret);
 
     

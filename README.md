@@ -3,7 +3,7 @@ PS2Doom WIP
 
 A working in progress PlayStation 2 port of DOOM
 
-Requires [PS2SDK](https://github.com/ps2dev/ps2sdk), [gsKit](https://github.com/ps2dev/gsKit), [PS2SDK-PORTS](https://github.com/ps2dev/ps2sdk-ports) to compile.
+Requires [PS2SDK](https://github.com/ps2dev/ps2sdk), [gsKit](https://github.com/ps2dev/gsKit), [PS2SDK-PORTS](https://github.com/ps2dev/ps2sdk-ports), [cosMix](https://github.com/Doom-modding-and-etc/cosmix) and [isjpcm](https://github.com/Doom-modding-and-etc/isjpcm.git) to compile.
 
 Buildable with: ```make all```
 
