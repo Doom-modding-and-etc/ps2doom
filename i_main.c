@@ -569,7 +569,7 @@ int main( int argc, char**	argv )
     GetElfFilename(argv[0], deviceName, fullPath, elfFilename);
     main_thread_id = GetThreadId();
     
-    Display_screen();
+    //Display_screen();
     
     SifInitRpc(0); 
 

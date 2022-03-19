@@ -39,7 +39,6 @@ asm/mcman_irx.s asm/mcserv_irx.s asm/ps2dev9.s asm/ps2atad.s asm/ps2fs_irx.s asm
 asm/ps2ip-nm.s asm/ps2ips.s asm/netman.s asm/smap.s asm/ps2http.s asm/usbd_irx.s asm/usbhdfsd_irx.s \
 asm/usbmass_bd.s asm/isjpcm.s
 
-
 EE_ASM_DIR = asm/
 
 EE_OBJS_DIR = obj/
@@ -55,6 +54,7 @@ $(EE_OBJS_DIR):
 
 all: $(EE_BIN) $(EE_ASM_DIR) $(EE_OBJS_DIR) $(EE_ASM_OBJS)
 	@echo "$$HEADER"
+
 #poweroff Module
 asm/poweroff.s: $(PS2SDK)/iop/irx/poweroff.irx
 	$(BIN2S) $< $@ poweroff_irx
