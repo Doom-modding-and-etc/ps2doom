@@ -2,17 +2,19 @@
 define HEADER
   
 
-  	 _______  _________   _______  	______          _____   _____  ____        ____  
-  	|  ___  ||  _______| |_____  | |  ____ \       | ___ | | ___ ||  _ \      / _  |
-  	| |___| || |           	   | | | |    | \      ||   || ||   ||| | \ \    / / | |
-	|   ____|| |_______   _____| | | |    |  \     ||   || ||   ||| |  \ \__/ /  | |
-  	|  |     |_______  | |  _____| | |    |   \    ||   || ||   ||| |   \____/   | |
-  	|  |             | | | |       | |    |    \   ||   || ||   ||| |            | |
-	|  |      _______| | | |_____  | |____|     \  ||___|| ||___||| |     	     | |
-  	|__|     |_________| |_______| |_____________\ |_____| |_____||_|	         |_|				 	                                       
+  	 	 	 _______  _________  _______  ______         _____  _____  ____        ____  
+  			|  ___  ||  _______||_____  ||  ____ \      | ___ || ___ ||  _ \      / _  |
+  			| |___| || |           	  | || |    | \     ||   ||||   ||| | \ \    / / | |
+			|   ____|| |_______  _____| || |    |  \    ||   ||||   ||| |  \ \__/ /  | |
+  			|  |     |_______  ||  _____|| |    |   \   ||   ||||   ||| |   \____/   | |
+  			|  |             | || |      | |    |    \  ||   ||||   ||| |            | |
+			|  |      _______| || |_____ | |____|     \ ||___||||___||| |     	     | |
+  			|__|     |_________||_______||_____________\|_____||_____||_|	         |_|				 	                                       
                                      
 endef
 export HEADER
+
+EE_BIN = bin/ps2doom.elf
 
 EE_OBJS = am_map.o cosmito_wav.o d_command.o d_items.o d_main.o d_net.o doomdef.o doomstat.o dstrings.o \
 elf_structure.o f_finale.o f_wipe.o \
@@ -26,30 +28,32 @@ p_switch.o p_telept.o p_tick.o p_user.o ps2doom.o r_bsp.o r_data.o r_draw.o \
 r_main.o r_plane.o r_segs.o r_sky.o r_things.o s_sound.o sjpcm_rpc.o sounds.o \
 st_lib.o st_stuff.o tables.o v_video.o w_wad.o w_mmap.o wi_stuff.o z_zone.o \
 
-
-EE_BIN = bin/ps2doom.elf
 EE_INCS = -I$(PS2SDK)/ports/include/SDL -I$(PS2SDK)/ports/include -I$(PS2DEV)/isjpcm/include/ -I$(GSKIT)/include -I$(GSKIT)/ee/dma/include -I$(GSKIT)/ee/gs/include -I$(GSKIT)/ee/toolkit/include 
 EE_LDFLAGS = -L$(PS2SDK)/ports/lib -L$(PS2DEV)/isjpcm/lib/ -L$(PS2SDK)/iop/lib/ -L$(PS2SDK)/ee/lib/ -L$(PS2DEV)/gsKit/lib 
 EE_LIBS = -lsdlmain -lsdlmixer -lsdl -lcdvd -lm -lps2ip -ldebug -lconfig -lmc -lc -lhdd -lpoweroff -lsjpcm -lmixer -llua -lgskit
 EE_CFLAGS = -DUSE_RWOPS -DHAVE_CONFIG_H -DHAVE_MIXER -Wall -DLUA_USE_PS2
+
+# contains ee and iop modules 
+EE_ASM_OBJS = asm/poweroff.s asm/freesio2.s asm/iomanX.s asm/sio2man.s asm/freepad.s \
+asm/mcman_irx.s asm/mcserv_irx.s asm/ps2dev9.s asm/ps2atad.s asm/ps2fs_irx.s asm/ps2hdd_irx.s \
+asm/ps2ip-nm.s asm/ps2ips.s asm/netman.s asm/smap.s asm/ps2http.s asm/usbd_irx.s asm/usbhdfsd_irx.s \
+asm/usbmass_bd.s asm/isjpcm.s
+
 EE_ASM_DIR = asm/
+
 EE_OBJS_DIR = obj/
 
 BIN2S = $(PS2SDK)/bin/bin2s
 
 $(EE_ASM_DIR):
 	@mkdir -p $@
-	@echo "$$HEADER"
+
 $(EE_OBJS_DIR):
 	@mkdir -p $@
 	mv $(EE_OBJS) obj/
 
-$(EE_BIN):
-	mv $(EE_BIN) bin/
-
-
-all: $(EE_BIN) $(EE_ASM_DIR) $(EE_OBJS_DIR) modules
-	
+all: $(EE_BIN) $(EE_ASM_DIR) $(EE_OBJS_DIR) $(EE_ASM_OBJS)
+	@echo "$$HEADER"
 
 #poweroff Module
 asm/poweroff.s: $(PS2SDK)/iop/irx/poweroff.irx
@@ -113,12 +117,8 @@ asm/usbmass_bd.s: $(PS2SDK)/iop/irx/usbmass_bd.irx
 asm/isjpcm.s: $(PS2DEV)/isjpcm/bin/isjpcm.irx
 	$(BIN2S) $< $@ isjpcm_irx
 
-#compile all modules
-modules: asm/poweroff.s asm/freesio2.s asm/iomanX.s asm/sio2man.s asm/freepad.s asm/mcman_irx.s asm/mcserv_irx.s asm/ps2dev9.s asm/ps2atad.s asm/ps2fs_irx.s asm/ps2hdd_irx.s asm/ps2ip-nm.s asm/ps2ips.s asm/netman.s asm/smap.s asm/ps2http.s asm/usbd_irx.s asm/usbhdfsd_irx.s asm/usbmass_bd.s asm/isjpcm.s
-
 clean: 
-	rm -fr $(EE_BIN) $(EE_ASM_DIR)
-	rm -fr $(EE_OBJS_DIR)
+	rm -fr $(EE_BIN) $(EE_ASM_DIR) $(EE_OBJS_DIR)
 run:
 	cd bin; ps2client -h $(PS2LINK_IP) execee host$(EE_BIN)
 

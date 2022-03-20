@@ -121,6 +121,3 @@
    Or internal, timer-based?
 
 - Fix the black screen after several updates(done)
-
-- kill gskit: -I$(GSKIT)/include -I$(GSKIT)/ee/dma/include -I$(GSKIT)/ee/gs/include -I$(GSKIT)/ee/toolkit/include \
--L$(PS2DEV)/gsKit/lib -lgskit

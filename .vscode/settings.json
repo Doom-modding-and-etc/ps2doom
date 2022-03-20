@@ -109,6 +109,9 @@
         "libpwroff.h": "c",
         "hdd-ioctl.h": "c",
         "stat.h": "c",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "ds34usb.h": "c",
+        "thbase.h": "c",
+        "usbd_macro.h": "c"
     }
 }
