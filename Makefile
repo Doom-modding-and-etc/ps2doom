@@ -27,6 +27,7 @@ p_mobj.o p_plats.o p_pspr.o p_saveg.o p_setup.o p_sight.o p_spec.o \
 p_switch.o p_telept.o p_tick.o p_user.o ps2doom.o r_bsp.o r_data.o r_draw.o \
 r_main.o r_plane.o r_segs.o r_sky.o r_things.o s_sound.o sjpcm_rpc.o sounds.o \
 st_lib.o st_stuff.o tables.o v_video.o w_wad.o w_mmap.o wi_stuff.o z_zone.o \
+ps2doom_bmp.o 
 
 EE_INCS = -I$(PS2SDK)/ports/include/SDL -I$(PS2SDK)/ports/include -I$(PS2DEV)/isjpcm/include/ -I$(GSKIT)/include -I$(GSKIT)/ee/dma/include -I$(GSKIT)/ee/gs/include -I$(GSKIT)/ee/toolkit/include 
 EE_LDFLAGS = -L$(PS2SDK)/ports/lib -L$(PS2DEV)/isjpcm/lib/ -L$(PS2SDK)/iop/lib/ -L$(PS2SDK)/ee/lib/ -L$(PS2DEV)/gsKit/lib 
@@ -116,6 +117,9 @@ asm/usbmass_bd.s: $(PS2SDK)/iop/irx/usbmass_bd.irx
  
 asm/isjpcm.s: $(PS2DEV)/isjpcm/bin/isjpcm.irx
 	$(BIN2S) $< $@ isjpcm_irx
+
+ps2doom_bmp.s: gfx/ps2doom.bmp
+	$(BIN2S) $< $@ ps2doom_bmp
 
 clean: 
 	rm -fr $(EE_BIN) $(EE_ASM_DIR) $(EE_OBJS_DIR)
