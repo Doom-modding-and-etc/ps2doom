@@ -1018,7 +1018,7 @@ void I_InitGraphics(void)
         I_Error("Could not set %dx%d video mode: %s", video_w, video_h, SDL_GetError());
     }
     
-    SDL_ShowCursor(1);
+    SDL_ShowCursor(0);
     SDL_WM_SetCaption("PS2DOOM! v1.0.5.0", "DOOM");
 
     /* Set up the screen displays */

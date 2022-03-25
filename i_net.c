@@ -265,19 +265,17 @@ int GetLocalAddress (void)
     struct hostent*	hostentry = 0;	// host information entry
     int			v;
 
-    // get local address
-//    v = gethostname (hostname, sizeof(hostname));
-    if (v == -1)
-	I_Error ("GetLocalAddress : gethostname: errno %d",errno);
-
 	#ifdef _EE
-		// TODO!!
+        v = gethostname (hostname, sizeof(hostname));
+            if (v == -1)
+	        I_Error ("GetLocalAddress : gethostname: errno %d",errno);
 	#else
 	    hostentry = gethostbyname (hostname);
+        if (!hostentry)
+	    I_Error ("GetLocalAddress : gethostbyname: couldn't get local host");
 	#endif
 
-    if (!hostentry)
-	I_Error ("GetLocalAddress : gethostbyname: couldn't get local host");
+
 		
     return *(int *)hostentry->h_addr_list[0];
 }
