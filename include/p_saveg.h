@@ -24,9 +24,9 @@
 #define __P_SAVEG__
 
 
-#ifdef __GNUG__
-#pragma interface
-#endif
+//#ifdef __GNUG__
+//#pragma interface
+//#endif
 
 
 // Persistent storage/archiving.

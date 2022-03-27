@@ -39,9 +39,9 @@
 
 
 
-#ifdef __GNUG__
-#pragma interface
-#endif
+//#ifdef __GNUG__
+//#pragma interface
+//#endif
 
 
 

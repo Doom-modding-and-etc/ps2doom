@@ -63,9 +63,9 @@
 
 #include "include/doomstat.h"
 
-#ifdef __GNUG__
-#pragma implementation "i_net.h"
-#endif
+//#ifdef __GNUG__
+//#pragma implementation "i_net.h"
+//#endif
 #include "include/i_net.h"
 
 

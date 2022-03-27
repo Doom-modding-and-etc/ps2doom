@@ -41,9 +41,9 @@
 
 #include "include/s_sound.h"
 
-#ifdef __GNUG__
-#pragma implementation "p_inter.h"
-#endif
+//#ifdef __GNUG__
+//#pragma implementation "p_inter.h"
+//#endif
 #include "include/p_inter.h"
 
 

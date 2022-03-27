@@ -24,9 +24,9 @@
 #define __M_SWAP__
 
 
-#ifdef __GNUG__
-#pragma interface
-#endif
+//#ifdef __GNUG__
+//#pragma interface
+//#endif
 
 // cosmito from lsdldoom
 #define doom_swap_s(x) \

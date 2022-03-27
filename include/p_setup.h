@@ -24,9 +24,9 @@
 #define __P_SETUP__
 
 
-#ifdef __GNUG__
-#pragma interface
-#endif
+//#ifdef __GNUG__
+//#pragma interface
+//#endif
 
 
 // NOT called by W_Ticker. Fixme.

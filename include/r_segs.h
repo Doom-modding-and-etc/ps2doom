@@ -24,9 +24,9 @@
 #define __R_SEGS__
 
 
-#ifdef __GNUG__
-#pragma interface
-#endif
+//#ifdef __GNUG__
+//#pragma interface
+//#endif
 
 
 void

@@ -38,6 +38,8 @@ extern char *doom2_endmsg[];
 
 #ifdef FRENCH
 #include "d_french.h"
+#elseif
+#include "d_portuguese.h"
 #else
 #include "d_englsh.h"
 #endif

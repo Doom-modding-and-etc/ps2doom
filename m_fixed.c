@@ -30,9 +30,9 @@
 #include "include/doomtype.h"
 #include "include/i_system.h"
 
-#ifdef __GNUG__
-#pragma implementation "m_fixed.h"
-#endif
+//#ifdef __GNUG__
+//#pragma implementation "m_fixed.h"
+//#endif
 #include "include/m_fixed.h"
 
 

@@ -30,9 +30,9 @@
 #include "include/sounds.h"
 #include "include/m_fixed.h"
 
-#ifdef __GNUG__
-#pragma implementation "info.h"
-#endif
+//#ifdef __GNUG__
+//#pragma implementation "info.h"
+//#endif
 #include "include/info.h"
 
 #include "include/p_mobj.h"

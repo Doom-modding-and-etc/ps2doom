@@ -25,9 +25,9 @@
 
 
 
-#ifdef __GNUG__
-#pragma implementation "m_swap.h"
-#endif
+//#ifdef __GNUG__
+//#pragma implementation "m_swap.h"
+//#endif
 #include "include/m_swap.h"
 
 

@@ -24,9 +24,9 @@
 #define __P_TICK__
 
 
-#ifdef __GNUG__
-#pragma interface
-#endif
+//#ifdef __GNUG__
+//#pragma interface
+//#endif
 
 
 // Called by C_Ticker,

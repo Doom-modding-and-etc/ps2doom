@@ -37,9 +37,9 @@
 #include "include/i_system.h"
 #include "include/z_zone.h"
 
-#ifdef __GNUG__
-#pragma implementation "include/w_wad.h"
-#endif
+//#ifdef __GNUG__
+//#pragma implementation "include/w_wad.h"
+//#endif
 #include "include/w_wad.h"
 #include "include/m_fixed.h"
 #include "include/ps2fread.h"

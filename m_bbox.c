@@ -28,9 +28,9 @@
 
 
 
-#ifdef __GNUG__
-#pragma implementation "m_bbox.h"
-#endif
+//#ifdef __GNUG__
+//#pragma implementation "m_bbox.h"
+//#endif
 #include "include/m_bbox.h"
 
 

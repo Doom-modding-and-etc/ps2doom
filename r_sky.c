@@ -35,9 +35,9 @@
 #include "include/r_data.h"
 
 
-#ifdef __GNUG__
-#pragma implementation "r_sky.h"
-#endif
+//#ifdef __GNUG__
+//#pragma implementation "r_sky.h"
+//#endif
 #include "include/r_sky.h"
 
 //

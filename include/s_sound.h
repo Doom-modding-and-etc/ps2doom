@@ -32,9 +32,9 @@
 #ifndef __S_SOUND__
 #define __S_SOUND__
 
-#ifdef __GNUG__
-#pragma interface
-#endif
+//#ifdef __GNUG__
+//#pragma interface
+//#endif
 #include "sounds.h"
 //
 // Initializes sound stuff, including volume
