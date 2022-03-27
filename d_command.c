@@ -11,56 +11,70 @@ void ps2_do_cheat(int cheat)
     event_t event;
     char *str;
     int i;
+    
+	// todo: scanf("%d", cheat);
 
     switch (cheat)
     {
        case 1: // God Mode
 	   str = "iddqd";		
 	   break;		
-       case 2: // Good fucking arsenal
+       
+	   case 2: // Good fucking arsenal
 	   str = "idfa";		
 	   break;
+	   
 	   case 3: // Key Full Ammo	
 	   str = "idkfa";		
 	   break;
-	   case 4: // No Clipping		str = "idclip";		
+	   
+	   case 4: // No Clipping		
+	   str = "idclip";		
 	   break;
+	   
 	   case 5: // Toggle Map         
 	   str = "iddt";		
 	   break;
+	   
 	   case 6: // Invincible with Chainsaw 	         
 	   str = "idchoppers";
 	   break;
+	   
 	   case 7:  // Berserker Strength Power-up    	 
 	   str = "idbeholds";		
 	   break;
+	   
 	   case 8:  //Invincibility Power-up
 	   str = "idbeholdv";		
 	   break;		
+	   
 	   case 9:  // Invisibility Power-Up
 	   str = "idbeholdi";		
 	   break;
-       case 10: //Automap Power-up      
+       
+	   case 10: //Automap Power-up      
 	   str = "idbeholda";		
 	   break;
+	   
 	   case 11: //Anti-Radiation Suit Power-up     
 	   str = "idbeholdr";
 	   break;
+	   
 	   case 12: // Light-Amplification Visor Power-up
 	   str = "idbeholdl";
 	   break;
+	   
 	   case 13: 
 	   str = "no_sound"; //Deactivates the sound
-          SjPCM_Pause();
+        SjPCM_Pause();
 	   return;
-           break; 
+	   break; 
+	   
 	   case 14: 
 	   str = "no_music";
-           S_StopMusic();
+        S_StopMusic();
 	   return;
 	   break;
-	   
-
     }
 
     for (i=0; i<strlen(str); i++) 

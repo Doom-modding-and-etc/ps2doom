@@ -108,9 +108,8 @@
    REJECT? That is, if one Sector/SSector not
    visible from the other, do not apply damage,not render sprite if player in other sector.
  
- Hmmm - explosion behind small pillar might not be
-   visible at all, but do we care?
-
+- Hmmm the explosion behind small pillar might not be
+visible at all, but do we care?
 
 - Ungraceful and untimely demise of Linuxdoom (core
    instead of I_Error) will leave idle sndserver
@@ -121,3 +120,5 @@
    Or internal, timer-based?
 
 - Fix the black screen after several updates(done)
+
+- Remove some c++ things on doom
