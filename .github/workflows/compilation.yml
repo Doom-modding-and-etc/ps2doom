@@ -24,7 +24,6 @@ jobs:
          git clone https://github.com/Doom-modding-and-etc/cosmix.git && cd cosmix
          make all 
 
-#
      - name: git checkout
        uses: actions/checkout@v2
 
