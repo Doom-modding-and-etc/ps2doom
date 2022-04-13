@@ -122,3 +122,5 @@ visible at all, but do we care?
 - Fix the black screen after several updates(done)
 
 - Remove some c++ things on doom
+
+-Add SDLmixer port by cosmito from nickyboum
