@@ -24,10 +24,11 @@ jobs:
          git clone https://github.com/Doom-modding-and-etc/cosmix.git && cd cosmix
          make all 
 
-#    - name: git checkout
-#      uses: actions/checkout@v2
+#
+     - name: git checkout
+       uses: actions/checkout@v2
 
-#    - run: git fetch --prune --unshallow
+     - run: git fetch --prune --unshallow
 
     - name: Compile ps2doom 
       run: make all 
