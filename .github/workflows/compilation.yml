@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ps2dev/ps2dev:latest
     steps:
+    
     - name: Install dependencies
       run: |
         apk add build-base git zip gawk
@@ -19,6 +20,7 @@ jobs:
       run: |
         git clone https://github.com/ps2homebrew/isjpcm.git && cd isjpcm 
         make install
+    
     - name: Git clone cosMix
       run: |
          git clone https://github.com/Doom-modding-and-etc/cosmix.git && cd cosmix
