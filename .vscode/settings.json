@@ -113,6 +113,8 @@
         "ds34usb.h": "c",
         "thbase.h": "c",
         "usbd_macro.h": "c",
-        "modules.h": "c"
+        "modules.h": "c",
+        "sdl_mixer.h": "c",
+        "smpeg.h": "c"
     }
 }

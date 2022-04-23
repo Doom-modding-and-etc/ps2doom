@@ -23,7 +23,7 @@
 //-----------------------------------------------------------------------------
 
 #include <SDL/SDL.h>
-#include <SDL/SDL_image.h>
+//#include <SDL/SDL_image.h>
 #include <stdio.h>
 #include <libmc.h>
 #include <libconfig.h>
@@ -38,6 +38,7 @@
 #include <fcntl.h>
 #include <sjpcm.h>
 #include <unistd.h>
+
 #define MAX_PARTITIONS   100
 
 // cosmitoMixer
@@ -46,6 +47,7 @@
 #include <mixer/mixer_thread.h>
 #include <kernel.h>     //for GetThreadId 
 #include <mixer/wav.h>
+#include <SDL/SDL_mixer.h>
 
 #include "include/elf_structure.h"
 #include "include/pad_support.h"
@@ -202,6 +204,7 @@ void Display_mode()
     int forceDisplayMode = -1;
     
     SDL_Surface *PAL;
+    
     SDL_Surface *NTSC;
     
     PAL = SDL_SetVideoMode(PAL_WIDTH, PAL_HEIGHT, PAL_BITS, SDL_SWSURFACE);
@@ -255,36 +258,53 @@ void Display_mode()
 
 }
 
+/* todo:
+void ShowMusic()
+{
+    Mix_Chunk *music1 = Mix_LoadWAV("songs/espelho.wav");
+    
+    Mix_OpenAudio(48000, MIX_DEFAULT_FORMAT, 2, 4096);
+
+    Mix_PlayChannel(-1, music1, 0);
+
+    Mix_VolumeMusic(100);
+}
+*/
+
 void Display_screen()
 {
-    //Todo: figure out whats going on the SDL1 cursor 
     #define WIDTH 640
     #define HEIGHT 448
     #define BITS 32
+
+    int ps2doomx, ps2doomy;   
     
     SDL_Init(SDL_INIT_VIDEO);
 
-    SDL_Surface *image;
-  
-    SDL_Surface *window;
-      
-    image = SDL_LoadBMP("gfx/ps2doom.bmp");
+    SDL_Surface *window = SDL_SetVideoMode(WIDTH, HEIGHT, BITS, SDL_NOFRAME);
     
-    window = SDL_SetVideoMode(WIDTH, HEIGHT, BITS, SDL_NOFRAME);
+    SDL_Surface *ps2doom = SDL_LoadBMP("gfx/ps2doom.bmp");
+
+    SDL_Rect ps2doomPosition = 
+    { 
+        ps2doomx = 0, 
+        ps2doomy = 0 
+    };
+
+    //ShowMusic();
+
+    SDL_BlitSurface(ps2doom, NULL, window, &ps2doomPosition);
+    
+    SDL_DisplayFormat(ps2doom);
+
+    SDL_FreeSurface(ps2doom);
 
     SDL_Flip(window);
-     // printf("SDL1.2 Is not working properly", SDL_GetError());
-    SDL_BlitSurface( image, NULL, window, NULL );  
-    
-    // Set window title
-    SDL_WM_SetCaption("Display BMP", NULL);
 
-    SDL_Delay(6000);
-    
-    SDL_DisplayFormat(image);
-    
-    SDL_FreeSurface(image);
+    SDL_ShowCursor(SDL_DISABLE);
 
+    SDL_Delay(20000);
+    
     SDL_Quit();
 }
 
@@ -296,18 +316,6 @@ char config_probestring[200];
 #define DEBUG_LIBCONFIG
 
 const char *hdd_wads_folder;
-//code by vts
-void ResetIOP()
-{
-	SifInitRpc(0);
-	while(!SifIopReset("", 0)){};
-	while(!SifIopSync()){};
-	SifLoadFileExit();
-        SifExitRpc();
-        SifInitRpc(0);
-        ResetIOP();
-	SifInitIopHeap();
-}
 
 int waitPadReady(int port, int slot) 
 {
@@ -566,22 +574,17 @@ int main( int argc, char**	argv )
     int swap_analogsticks;
     int configLoadSuccess = 0;
     int value;
+    
     GetElfFilename(argv[0], deviceName, fullPath, elfFilename);
+    
     main_thread_id = GetThreadId();
     
-    //Display_screen();
+    Display_screen();
     
     SifInitRpc(0); 
-
-    /********************************************************* 
-    **********************************************************    
-    ** todo:                                                **
-    ** init_scr();                                          **
-    ** scr_printf("--==== PS2DOOM v1.0.6.0 ====--\n\n\n");  **
-    ** scr_clear();                                         **
-    **********************************************************
-    **********************************************************/
     
+    
+
     printf("sample: kicking IRXs\n");
 	
     SifExecModuleBuffer(freesd, size_freesd, 0, NULL, NULL);
@@ -635,14 +638,14 @@ int main( int argc, char**	argv )
         printf("mc0 trouble... should save to other device... To implement\n");  /// TBD
     
     // create save/load dir (mc0:PS2DOOM)
-    open("mc0:PS2DOOM/doomsav0.dsg", O_RDONLY);
+    fopen("mc0:PS2DOOM/doomsav0.dsg", O_RDONLY);
     if (handle < 0)
     {
         mkdir("mc0:PS2DOOM", 0007); // Make sure it exists
         printf(" ... created mc0:PS2DOOM ...\n");
     }
     else
-        close(handle);
+        fclose(handle);
 
 
     /// config
@@ -650,13 +653,13 @@ int main( int argc, char**	argv )
 
     // First, try to load from localpath. If fails, try from 'mc0:'
     
-    fp = open(configfile, "rb");
+    fp = fopen(configfile, "rb");
     if(!fp)
     {
         printf("file '%s' not found. Going to try 'mc0:PS2DOOM/ps2doom.config'\n", configfile);
         sprintf(configfile, "%s", "mc0:PS2DOOM/ps2doom.config");
 
-        fp = open(configfile, "rb");
+        fp = fopen(configfile, "rb");
         if(!fp)
         {
             // Using default actions for buttons
@@ -830,7 +833,7 @@ int main( int argc, char**	argv )
 
         //todo: rewrite the hdd support maybe i should see the open ps2 loader hdd support 
         //#endif
-        ret = open("hdd0:", HDIOC_STATUS);
+        ret = fopen("hdd0:", HDIOC_STATUS);
 
         if (ret > 0)
         {

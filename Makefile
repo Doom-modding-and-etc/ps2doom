@@ -1,15 +1,11 @@
-
-define HEADER
-  
-
-  	 	 	 _______  _________  _______  ______         _____  _____  ____        ____  
-  			|  ___  ||  _______||_____  ||  ____ \      | ___ || ___ ||  _ \      / _  |
-  			| |___| || |           	  | || |    | \     ||   ||||   ||| | \ \    / / | |
-			|   ____|| |_______  _____| || |    |  \    ||   ||||   ||| |  \ \__/ /  | |
-  			|  |     |_______  ||  _____|| |    |   \   ||   ||||   ||| |   \____/   | |
-  			|  |             | || |      | |    |    \  ||   ||||   ||| |            | |
-			|  |      _______| || |_____ | |____|     \ ||___||||___||| |     	     | |
-  			|__|     |_________||_______||_____________\|_____||_____||_|	         |_|				 	                                       
+define HEADER  	 _______  _________  _______  ______         _____  _____  ____        ____  
+  				|  ___  ||  _______||_____  ||  ____ \      | ___ || ___ ||  _ \      / _  |
+  				| |___| || |           	  | || |    | \     ||   ||||   ||| | \ \    / / | |
+				|   ____|| |_______  _____| || |    |  \    ||   ||||   ||| |  \ \__/ /  | |
+  				|  |     |_______  ||  _____|| |    |   \   ||   ||||   ||| |   \____/   | |
+  				|  |             | || |      | |    |    \  ||   ||||   ||| |            | |
+				|  |      _______| || |_____ | |____|     \ ||___||||___||| |     	     | |
+  				|__|     |_________||_______||_____________\|_____||_____||_|	         |_|				 	                                       
                                      
 endef
 export HEADER
@@ -30,8 +26,8 @@ st_lib.o st_stuff.o tables.o v_video.o w_wad.o w_mmap.o wi_stuff.o z_zone.o \
 
 EE_INCS = -I$(PS2SDK)/ports/include/SDL -I$(PS2SDK)/ports/include -I$(PS2DEV)/isjpcm/include/ -I$(GSKIT)/include -I$(GSKIT)/ee/dma/include -I$(GSKIT)/ee/gs/include -I$(GSKIT)/ee/toolkit/include 
 EE_LDFLAGS = -L$(PS2SDK)/ports/lib -L$(PS2DEV)/isjpcm/lib/ -L$(PS2SDK)/iop/lib/ -L$(PS2SDK)/ee/lib/ -L$(PS2DEV)/gsKit/lib 
-EE_LIBS = -lsdlmain -lsdlmixer -lsdl -lcdvd -lm -lps2ip -ldebug -lconfig -lmc -lc -lhdd -lpoweroff -lsjpcm -lmixer -llua -lgskit
-EE_CFLAGS = -DUSE_RWOPS -DHAVE_CONFIG_H -DHAVE_MIXER -Wall -DLUA_USE_PS2
+EE_LIBS = -lsdlmain -lsdlmixer -lsdl  -lcdvd -lm -lps2ip -ldebug -lconfig -lmc -lc -lhdd -lpoweroff -lsjpcm -lmixer -lgskit -ldmakit
+EE_CFLAGS = -DUSE_RWOPS -DHAVE_CONFIG_H -DHAVE_MIXER -Wall
 
 # contains ee and iop modules 
 EE_ASM_OBJS = asm/poweroff.s asm/freesio2.s asm/iomanX.s asm/sio2man.s asm/freepad.s \
