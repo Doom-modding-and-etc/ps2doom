@@ -38,6 +38,7 @@
 #include <fcntl.h>
 #include <sjpcm.h>
 #include <unistd.h>
+#include <SDL/SDL_mixer.h>
 
 #define MAX_PARTITIONS   100
 
@@ -47,7 +48,7 @@
 #include <mixer/mixer_thread.h>
 #include <kernel.h>     //for GetThreadId 
 #include <mixer/wav.h>
-#include <SDL/SDL_mixer.h>
+
 
 #include "include/elf_structure.h"
 #include "include/pad_support.h"
@@ -253,12 +254,12 @@ void Display_mode()
     {
       scr_printf ("error loading SAMPLECOUNT");
     }
-    D_DoomMain (); 
+    D_DoomMain(); 
 
 
 }
 
-/* todo:
+//not working yet
 void ShowMusic()
 {
     Mix_Chunk *music1 = Mix_LoadWAV("songs/espelho.wav");
@@ -269,7 +270,7 @@ void ShowMusic()
 
     Mix_VolumeMusic(100);
 }
-*/
+
 
 void Display_screen()
 {
@@ -693,7 +694,7 @@ int main( int argc, char**	argv )
         
         config_init(&cfg);
         x = config_read(&cfg, fp);
-        close(fp);
+        fclose(fp);
         if(x)
         {
             // Process each ps2doom.controls config entries

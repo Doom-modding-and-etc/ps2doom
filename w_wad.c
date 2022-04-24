@@ -138,7 +138,7 @@ void W_AddFile (char *filename)
 	 reloadlump = numlumps;
     }
 		
-    if ( (handle = open (filename,"rb")) == NULL)
+    if ( (handle = fopen (filename,"rb")) == NULL)
     {
 	 printf (" couldn't open %s\n",filename);
 	 return;
@@ -200,7 +200,7 @@ void W_AddFile (char *filename)
     }
 	
     if (reloadname)
-	close (handle);
+	fclose (handle);
 }
 
 
@@ -224,7 +224,7 @@ void W_Reload (void)
     if (!reloadname)
 	return;
 		
-    if ( (handle = open (reloadname,"rb")) == NULL)
+    if ( (handle = fopen (reloadname,"rb")) == NULL)
 	I_Error ("W_Reload: couldn't open %s",reloadname);
 
     fread (&header, 1, sizeof(header), handle);
@@ -249,7 +249,7 @@ void W_Reload (void)
 	lump_p->size = LONG(fileinfo->size);
     }
 	
-    close (handle);
+    fclose (handle);
 }
 
 
@@ -427,7 +427,7 @@ int ps2_fread(void *dest, int num, int size, FILE *fd)
 
 		fread(ps2_buffer, 1, size, fd);
 
-		close(fd);
+		fclose(fd);
 
 		ps2_fread_init = 1;
 	}
@@ -466,7 +466,7 @@ W_ReadLump
     if (l->handle == -1)
     {
 	// reloadable file, so use open / read / close
-	if ( (handle = open (reloadname,"rb")) == NULL)
+	if ( (handle = fopen (reloadname,"rb")) == NULL)
 	    I_Error ("W_ReadLump: couldn't open %s",reloadname);
     }
     else
@@ -487,7 +487,7 @@ W_ReadLump
 		 c,l->size,lump);	
 
     if (l->handle == -1)
-	close (handle);
+	fclose (handle);
 		
     // ??? I_EndRead ();
 }
