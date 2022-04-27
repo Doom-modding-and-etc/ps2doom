@@ -26,6 +26,10 @@ jobs:
          git clone https://github.com/Doom-modding-and-etc/cosmix.git && cd cosmix
          make all 
 
+    - name: change user permission to me 
+      run: |
+        git config --global --add safe.directory /__w/ps2doom/ps2doom
+
     - name: git checkout
       uses: actions/checkout@v2
     - run: | 
