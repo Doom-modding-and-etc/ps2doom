@@ -31,6 +31,8 @@ Credits
 
 [id Software](https://github.com/id-Software) for the source release
 
+Jason yu
+
 [Lukasz D.K](https://github.com/lukaszdk) for the quick port
 
 [cosmito](https://github.com/cosmito) for upgrade the port
@@ -48,6 +50,8 @@ Credits
 [El irsa](https://github.com/israpps) and squidware for helping me in question of porting the newlib
 
 [7dog123](https://github.com/7dog123) for fixes doom itself and patches
+
+Daniel santos
 
 Copyright
 =========
