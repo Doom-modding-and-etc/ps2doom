@@ -49,7 +49,7 @@
 #include <kernel.h>     //for GetThreadId 
 #include <mixer/wav.h>
 
-
+#include "include/modules.h"
 #include "include/elf_structure.h"
 #include "include/pad_support.h"
 #include "include/hdd.h"
@@ -895,5 +895,3 @@ int main( int argc, char**	argv )
     *********************************************************/ 
    Display_mode();
 } 
-
-
