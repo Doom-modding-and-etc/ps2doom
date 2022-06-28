@@ -1,39 +1,41 @@
-unsigned char usbd;
-unsigned int size_usbd;
+#include <tamtypes.h>
+
+u8 usbd;
+u32 size_usbd;
 
 //Declare usbhdfsd module //
-unsigned char usbhdfsd;
-unsigned int size_usbhdfsd;
+u8 usbhdfsd;
+u32 size_usbhdfsd;
 
-unsigned char usbmass_bd_irx;
-unsigned int size_usbmass_bd_irx;
+u8 usbmass_bd_irx;
+u32 size_usbmass_bd_irx;
 
-unsigned char SJPCM;
-unsigned int size_SJPCM;
+u8 SJPCM;
+u32 size_SJPCM;
 
-unsigned char sio2man_irx;
-unsigned int size_sio2man_irx;
+u8 sio2man_irx;
+u32 size_sio2man_irx;
 
 /*Declare ps2dev9 module*/
-unsigned char ps2dev9;
-unsigned int size_ps2dev9;
+u8 ps2dev9;
+u32 size_ps2dev9;
 /*Declare ps2atad module*/
-unsigned char ps2atad;
-unsigned int size_ps2atad;
+u8 ps2atad;
+u32 size_ps2atad;
 /*Declare ps2hdd module*/
-unsigned char ps2hdd;
-unsigned int size_ps2hdd;
+u8 ps2hdd;
+u32 size_ps2hdd;
 /*Declare ps2fsmodule*/
-unsigned char ps2fs;
-unsigned int size_ps2fs;
+u8 ps2fs;
+u32 size_ps2fs;
 
 /*Declare poweroff module*/
-unsigned char poweroff;
-unsigned int size_poweroff;
+u8 poweroff;
+u32 size_poweroff;
 
 /*Declare cdvd module*/
-unsigned char cdvd;
-unsigned int size_cdvd;
+u8 cdvd;
+u32 size_cdvd;
 
-unsigned char freesd;
-unsigned int size_freesd;
+u8 freesd;
+u32 size_freesd;
