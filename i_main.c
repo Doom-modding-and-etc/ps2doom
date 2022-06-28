@@ -65,39 +65,39 @@ extern unsigned char usbd;
 extern unsigned int size_usbd;
 
 //Declare usbhdfsd module //
-extern unsigned char usbhdfsd;
-extern unsigned int size_usbhdfsd;
+extern u8 usbhdfsd;
+extern u32 size_usbhdfsd;
 
-extern unsigned char usbmass_bd_irx;
-extern unsigned int size_usbmass_bd_irx;
+extern u8 usbmass_bd_irx;
+extern u32 size_usbmass_bd_irx;
 
-extern unsigned char SJPCM;
-extern unsigned int size_SJPCM;
+extern u8 SJPCM;
+extern u32 size_SJPCM;
 
-extern unsigned char sio2man_irx;
-extern unsigned int size_sio2man_irx;
+extern u8 sio2man_irx;
+extern u32 size_sio2man_irx;
 
 /*Declare ps2dev9 module*/
-extern unsigned char ps2dev9;
-extern unsigned int size_ps2dev9;
+extern u8 ps2dev9;
+extern u32 size_ps2dev9;
 /*Declare ps2atad module*/
-extern unsigned char ps2atad;
-extern unsigned int size_ps2atad;
+extern u8 ps2atad;
+extern u32 size_ps2atad;
 /*Declare ps2hdd module*/
-extern unsigned char ps2hdd;
-extern unsigned int size_ps2hdd;
+extern u8 ps2hdd;
+extern u32 size_ps2hdd;
 /*Declare ps2fsmodule*/
-extern unsigned char ps2fs;
-extern unsigned int size_ps2fs;
+extern u8 ps2fs;
+extern u32 size_ps2fs;
 /*Declare poweroff module*/
-extern unsigned char poweroff;
-extern unsigned int size_poweroff;
+extern u8 poweroff;
+extern u32 size_poweroff;
 /*Declare cdvd module*/
-extern unsigned char cdvd;
-extern unsigned int size_cdvd;
+extern u8 cdvd;
+extern u32 size_cdvd;
 
-extern unsigned char freesd;
-extern unsigned int size_freesd;
+extern u8 freesd;
+extern u32 size_freesd;
 
 extern int SAMPLECOUNT = 512;
 
