@@ -52,7 +52,6 @@
 
 #include "include/elf_structure.h"
 #include "include/pad_support.h"
-#include "include/modules.h"
 #include "include/hdd.h"
 
 #include "include/doomdef.h"
@@ -61,8 +60,8 @@
 
 #include "include/w_wad.h"
 
-extern unsigned char usbd;
-extern unsigned int size_usbd;
+extern u8 usbd;
+extern u32 size_usbd;
 
 //Declare usbhdfsd module //
 extern u8 usbhdfsd;
