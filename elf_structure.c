@@ -1,4 +1,4 @@
-#include "include/elf_structure.h"
+#include "elf_structure.h"
 #include <elf.h>
 #include <stdlib.h>
 #include <libcdvd-common.h>
@@ -166,4 +166,5 @@ void elf_loader()
     ExecPS2((void *)boot_header->entry, 0, 1, args);
 
 }
+
 

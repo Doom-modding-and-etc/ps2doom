@@ -26,7 +26,7 @@
 
 #include <string.h>
 
-#include "include/i_system.h"
+#include "i_system.h"
 
 int		myargc;
 char**		myargv;
@@ -52,6 +52,7 @@ int M_CheckParm (char *check)
 
     return 0;
 }
+
 
 
 

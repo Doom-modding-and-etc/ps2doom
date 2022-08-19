@@ -28,19 +28,19 @@
 #include <ctype.h>
 
 // Functions.
-#include "include/m_swap.h"
-#include "include/i_system.h"
-#include "include/z_zone.h"
-#include "include/v_video.h"
-#include "include/w_wad.h"
-#include "include/s_sound.h"
+#include "m_swap.h"
+#include "i_system.h"
+#include "z_zone.h"
+#include "v_video.h"
+#include "w_wad.h"
+#include "s_sound.h"
 
 // Data.
-#include "include/dstrings.h"
-#include "include/sounds.h"
+#include "dstrings.h"
+#include "sounds.h"
 
-#include "include/doomstat.h"
-#include "include/r_state.h"
+#include "doomstat.h"
+#include "r_state.h"
 
 // ?
 //#include "doomstat.h"
@@ -254,7 +254,7 @@ void F_Ticker (void)
 // F_TextWrite
 //
 
-#include "include/hu_stuff.h"
+#include "hu_stuff.h"
 extern	patch_t *hu_font[HU_FONTSIZE];
 
 

@@ -28,22 +28,22 @@
 
 #include <math.h>
 
-#include "include/z_zone.h"
+#include "z_zone.h"
 
-#include "include/m_swap.h"
-#include "include/m_bbox.h"
+#include "m_swap.h"
+#include "m_bbox.h"
 
-#include "include/g_game.h"
+#include "g_game.h"
 
-#include "include/i_system.h"
-#include "include/w_wad.h"
+#include "i_system.h"
+#include "w_wad.h"
 
-#include "include/doomdef.h"
-#include "include/p_local.h"
+#include "doomdef.h"
+#include "p_local.h"
 
-#include "include/s_sound.h"
+#include "s_sound.h"
 
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 
 void	P_SpawnMapThing (mapthing_t*	mthing);
@@ -703,6 +703,7 @@ void P_Init (void)
     P_InitPicAnims ();
     R_InitSprites (sprnames);
 }
+
 
 
 

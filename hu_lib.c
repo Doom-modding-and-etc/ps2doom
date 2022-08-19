@@ -25,15 +25,15 @@
 
 #include <ctype.h>
 
-#include "include/m_swap.h"
+#include "m_swap.h"
 
-#include "include/doomdef.h"
+#include "doomdef.h"
 
-#include "include/v_video.h"
+#include "v_video.h"
 
-#include "include/hu_lib.h"
-#include "include/r_local.h"
-#include "include/r_draw.h"
+#include "hu_lib.h"
+#include "r_local.h"
+#include "r_draw.h"
 
 // boolean : whether the screen is always erased
 #define noterased viewwindowx
@@ -352,4 +352,5 @@ void HUlib_eraseIText(hu_itext_t* it)
     HUlib_eraseTextLine(&it->l);
     it->laston = *it->on;
 }
+
 

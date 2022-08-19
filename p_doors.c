@@ -24,20 +24,20 @@
 
 
 
-#include "include/z_zone.h"
-#include "include/doomdef.h"
-#include "include/p_local.h"
+#include "z_zone.h"
+#include "doomdef.h"
+#include "p_local.h"
 
-#include "include/s_sound.h"
+#include "s_sound.h"
 
 
 // State.
-#include "include/doomstat.h"
-#include "include/r_state.h"
+#include "doomstat.h"
+#include "r_state.h"
 
 // Data.
-#include "include/dstrings.h"
-#include "include/sounds.h"
+#include "dstrings.h"
+#include "sounds.h"
 
 #if 0
 //

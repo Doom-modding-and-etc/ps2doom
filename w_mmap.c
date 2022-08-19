@@ -5,9 +5,9 @@
 ** EN-US: See if needs more something.              **
 ******************************************************
 ******************************************************/
-#include "include/z_zone.h"
-#include "include/i_system.h"
-#include "include/w_wad.h"
+#include "z_zone.h"
+#include "i_system.h"
+#include "w_wad.h"
 #include <string.h>
 
 static struct

@@ -26,25 +26,23 @@
 
 
 // Data.
-#include "include/doomdef.h"
-#include "include/dstrings.h"
-#include "include/sounds.h"
+#include "doomdef.h"
+#include "dstrings.h"
+#include "sounds.h"
 
-#include "include/doomstat.h"
+#include "doomstat.h"
 
-#include "include/m_random.h"
-#include "include/i_system.h"
+#include "m_random.h"
+#include "i_system.h"
 
-#include "include/am_map.h"
+#include "am_map.h"
 
-#include "include/p_local.h"
+#include "p_local.h"
 
-#include "include/s_sound.h"
+#include "s_sound.h"
 
-//#ifdef __GNUG__
-//#pragma implementation "p_inter.h"
-//#endif
-#include "include/p_inter.h"
+
+#include "p_inter.h"
 
 
 #define BONUSADD	6
@@ -916,4 +914,5 @@ P_DamageMobj
     }
 			
 }
+
 

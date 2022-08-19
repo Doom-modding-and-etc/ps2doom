@@ -32,17 +32,14 @@
 #include <ctype.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include "include/m_swap.h"
-#include "include/doomtype.h"
-#include "include/i_system.h"
-#include "include/z_zone.h"
+#include "m_swap.h"
+#include "doomtype.h"
+#include "i_system.h"
+#include "z_zone.h"
 
-//#ifdef __GNUG__
-//#pragma implementation "include/w_wad.h"
-//#endif
-#include "include/w_wad.h"
-#include "include/m_fixed.h"
-#include "include/ps2fread.h"
+#include "w_wad.h"
+#include "m_fixed.h"
+#include "ps2fread.h"
 
 
 

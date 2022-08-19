@@ -27,20 +27,20 @@
 
 #include <ctype.h>
 
-#include "include/m_swap.h"
+#include "m_swap.h"
 
-#include "include/doomdef.h"
+#include "doomdef.h"
 
-#include "include/z_zone.h"
-#include "include/v_video.h"
+#include "z_zone.h"
+#include "v_video.h"
 
-#include "include/i_system.h"
+#include "i_system.h"
 
-#include "include/w_wad.h"
+#include "w_wad.h"
 
-#include "include/st_stuff.h"
-#include "include/st_lib.h"
-#include "include/r_local.h"
+#include "st_stuff.h"
+#include "st_lib.h"
+#include "r_local.h"
 
 
 // in AM_map.c
@@ -290,4 +290,5 @@ STlib_updateBinIcon
     }
 
 }
+
 

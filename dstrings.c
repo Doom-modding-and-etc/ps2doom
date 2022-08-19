@@ -22,13 +22,7 @@
 // static const char rcsid[] = "$Id: m_bbox.c,v 1.1 1997/02/03 22:45:10 b1 Exp $";
 //-----------------------------------------------------------------------------
 
-
-
-
-#ifdef __GNUG__
-#pragma implementation "dstrings.h"
-#endif
-#include "include/dstrings.h"
+#include "dstrings.h"
 
 
 
@@ -68,5 +62,6 @@ char* endmsg[NUM_QUITMESSAGES+1]=
 
 
   
+
 
 

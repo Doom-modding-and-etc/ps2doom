@@ -31,13 +31,13 @@
 
 #include <stdlib.h>
 
-#include "include/i_system.h"
+#include "i_system.h"
 
-#include "include/doomdef.h"
-#include "include/doomstat.h"
+#include "doomdef.h"
+#include "doomstat.h"
 
-#include "include/r_local.h"
-#include "include/r_sky.h"
+#include "r_local.h"
+#include "r_sky.h"
 
 
 // OPTIMIZE: closed two sided lines as single sided
@@ -737,4 +737,5 @@ void R_StoreWallRange(int start, int stop )
     }
     ds_p++;
 }
+
 

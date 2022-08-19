@@ -27,17 +27,14 @@
 
 
 // Data.
-#include "include/sounds.h"
-#include "include/m_fixed.h"
+#include "sounds.h"
+#include "m_fixed.h"
 
-//#ifdef __GNUG__
-//#pragma implementation "info.h"
-//#endif
-#include "include/info.h"
+#include "info.h"
 
-#include "include/p_mobj.h"
+#include "p_mobj.h"
 
-#include "include/z_zone.h"
+#include "z_zone.h"
 char *sprnames[] = 
 {
     "TROO","SHTG","PUNG","PISG","PISF","SHTF","SHT2","CHGG","CHGF","MISG",

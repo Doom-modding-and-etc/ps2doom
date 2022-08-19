@@ -30,27 +30,27 @@
 
 #include <stdlib.h>
 
-#include "include/doomdef.h"
-#include "include/doomstat.h"
+#include "doomdef.h"
+#include "doomstat.h"
 
-#include "include/i_system.h"
-#include "include/z_zone.h"
-#include "include/m_argv.h"
-#include "include/m_random.h"
-#include "include/w_wad.h"
+#include "i_system.h"
+#include "z_zone.h"
+#include "m_argv.h"
+#include "m_random.h"
+#include "w_wad.h"
 
-#include "include/r_local.h"
-#include "include/p_local.h"
+#include "r_local.h"
+#include "p_local.h"
 
-#include "include/g_game.h"
+#include "g_game.h"
 
-#include "include/s_sound.h"
+#include "s_sound.h"
 
 // State.
-#include "include/r_state.h"
+#include "r_state.h"
 
 // Data.
-#include "include/sounds.h"
+#include "sounds.h"
 
 
 //

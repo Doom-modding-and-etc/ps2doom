@@ -31,14 +31,14 @@
 #include <stdlib.h>
 
 
-#include "include/m_bbox.h"
+#include "m_bbox.h"
 
-#include "include/doomdef.h"
-#include "include/p_local.h"
+#include "doomdef.h"
+#include "p_local.h"
 
 
 // State.
-#include "include/r_state.h"
+#include "r_state.h"
 
 //
 // P_AproxDistance

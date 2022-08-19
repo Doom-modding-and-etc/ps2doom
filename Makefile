@@ -20,7 +20,7 @@ i_main.o i_net.o i_sound.o i_system.o i_video.o info.o m_argv.o m_bbox.o \
 m_cheat.o m_fixed.o m_menu.o m_misc.o m_random.o m_swap.o mixer_thread.o mixer.o mmus2mid.o p_ceilng.o \
 p_doors.o p_enemy.o p_floor.o p_inter.o p_lights.o p_map.o p_maputl.o \
 p_mobj.o p_plats.o p_pspr.o p_saveg.o p_setup.o p_sight.o p_spec.o \
-p_switch.o p_telept.o p_tick.o p_user.o ps2doom.o r_bsp.o r_data.o r_draw.o \
+p_switch.o p_telept.o p_tick.o p_user.o r_bsp.o r_data.o r_draw.o \
 r_main.o r_plane.o r_segs.o r_sky.o r_things.o s_sound.o sjpcm_rpc.o sounds.o \
 st_lib.o st_stuff.o tables.o v_video.o w_wad.o w_mmap.o wi_stuff.o z_zone.o \
 

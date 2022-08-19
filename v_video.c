@@ -28,16 +28,16 @@
 
 
 
-#include "include/m_swap.h"
-#include "include/i_system.h"
-#include "include/r_local.h"
+#include "m_swap.h"
+#include "i_system.h"
+#include "r_local.h"
 
-#include "include/doomdef.h"
-#include "include/doomdata.h"
+#include "doomdef.h"
+#include "doomdata.h"
 
-#include "include/m_bbox.h"
+#include "m_bbox.h"
 
-#include "include/v_video.h"
+#include "v_video.h"
 
 
 // Each screen is [SCREENWIDTH*SCREENHEIGHT]; 

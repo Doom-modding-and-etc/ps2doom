@@ -27,13 +27,13 @@
 
 
 
-#include "include/m_menu.h"
-#include "include/i_system.h"
-#include "include/i_video.h"
-#include "include/i_net.h"
-#include "include/g_game.h"
-#include "include/doomdef.h"
-#include "include/doomstat.h"
+#include "m_menu.h"
+#include "i_system.h"
+#include "i_video.h"
+#include "i_net.h"
+#include "g_game.h"
+#include "doomdef.h"
+#include "doomstat.h"
 
 #define	NCMD_EXIT		0x80000000
 #define	NCMD_RETRANSMIT		0x40000000

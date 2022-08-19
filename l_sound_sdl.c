@@ -35,18 +35,18 @@
 #include <SDL_version.h>
 #include <SDL_mixer.h>
 #include <stdio.h>
-#include "include/z_zone.h"
-#include "include/m_swap.h"
-#include "include/i_system.h"
-#include "include/l_sound_sdl.h"
-#include "include/m_argv.h"
-#include "include/m_misc.h"
-#include "include/w_wad.h"
+#include "z_zone.h"
+#include "m_swap.h"
+#include "i_system.h"
+#include "l_sound_sdl.h"
+#include "m_argv.h"
+#include "m_misc.h"
+#include "w_wad.h"
 
-#include "include/doomdef.h"
-#include "include/doomstat.h"
-#include "include/doomtype.h"
-#include "include/d_main.h"
+#include "doomdef.h"
+#include "doomstat.h"
+#include "doomtype.h"
+#include "d_main.h"
 
 // The number of internal mixing channels,
 //  the samples calculated for each mixing step,

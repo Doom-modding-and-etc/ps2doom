@@ -26,30 +26,30 @@
 
 #include <stdio.h>
 
-#include "include/m_swap.h"
+#include "m_swap.h"
 
-#include "include/z_zone.h"
+#include "z_zone.h"
 
-#include "include/m_random.h"
+#include "m_random.h"
 
-#include "include/i_system.h"
+#include "i_system.h"
 
-#include "include/w_wad.h"
+#include "w_wad.h"
 
-#include "include/g_game.h"
+#include "g_game.h"
 
-#include "include/r_local.h"
-#include "include/s_sound.h"
+#include "r_local.h"
+#include "s_sound.h"
 
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 // Data.
-#include "include/sounds.h"
+#include "sounds.h"
 
 // Needs access to LFB.
-#include "include/v_video.h"
+#include "v_video.h"
 
-#include "include/wi_stuff.h"
+#include "wi_stuff.h"
 
 //
 // Data needed to add patches to full screen intermission pics.

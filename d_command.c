@@ -1,6 +1,6 @@
 #include <string.h>
-#include "include/s_sound.h"
-#include "include/d_main.h"
+#include "s_sound.h"
+#include "d_main.h"
 #include <sjpcm.h>
 
 /****************************************************************************
@@ -87,5 +87,6 @@ void ps2_do_cheat(int cheat)
       D_PostEvent (&event);	
     }
 }
+
 
 

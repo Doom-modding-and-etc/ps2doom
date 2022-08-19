@@ -24,20 +24,20 @@
 
 
 
-#include "include/i_system.h"
-#include "include/z_zone.h"
-#include "include/m_random.h"
+#include "i_system.h"
+#include "z_zone.h"
+#include "m_random.h"
 
-#include "include/doomdef.h"
-#include "include/p_local.h"
-#include "include/sounds.h"
+#include "doomdef.h"
+#include "p_local.h"
+#include "sounds.h"
 
-#include "include/st_stuff.h"
-#include "include/hu_stuff.h"
+#include "st_stuff.h"
+#include "hu_stuff.h"
 
-#include "include/s_sound.h"
+#include "s_sound.h"
 
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 
 void G_PlayerReborn (int player);

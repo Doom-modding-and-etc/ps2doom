@@ -25,23 +25,23 @@
 
 #include <ctype.h>
 
-#include "include/doomdef.h"
+#include "doomdef.h"
 
-#include "include/z_zone.h"
+#include "z_zone.h"
 
-#include "include/m_swap.h"
+#include "m_swap.h"
 
-#include "include/hu_stuff.h"
-#include "include/hu_lib.h"
-#include "include/w_wad.h"
+#include "hu_stuff.h"
+#include "hu_lib.h"
+#include "w_wad.h"
 
-#include "include/s_sound.h"
+#include "s_sound.h"
 
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 // Data.
-#include "include/dstrings.h"
-#include "include/sounds.h"
+#include "dstrings.h"
+#include "sounds.h"
 
 //
 // Locally used constants, shortcuts.

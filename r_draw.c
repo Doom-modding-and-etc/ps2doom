@@ -27,19 +27,19 @@
 
 
 
-#include "include/doomdef.h"
+#include "doomdef.h"
 
-#include "include/i_system.h"
-#include "include/z_zone.h"
-#include "include/w_wad.h"
+#include "i_system.h"
+#include "z_zone.h"
+#include "w_wad.h"
 
-#include "include/r_local.h"
+#include "r_local.h"
 
 // Needs access to LFB (guess what).
-#include "include/v_video.h"
+#include "v_video.h"
 
 // State.
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 
 // ?

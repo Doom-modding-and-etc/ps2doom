@@ -59,13 +59,13 @@
 #ifdef MSDOS /* proff: I don't use allegro in windows */
 #include <allegro.h>
 #endif /* !MSDOS */
-#include "include/mmus2mid.h"
+#include "mmus2mid.h"
 //#include "lprintf.h"  // jff 08/03/98 - declaration of lprintf
 
 //#define STANDALONE  /* uncomment this to make MMUS2MID.EXE */
 #ifndef STANDALONE
-#include "include/m_swap.h"
-#include "include/z_zone.h"
+#include "m_swap.h"
+#include "z_zone.h"
 #endif
 
 // some macros to decode mus event bit fields

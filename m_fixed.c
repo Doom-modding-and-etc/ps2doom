@@ -27,13 +27,10 @@
 
 #include <stdlib.h>
 
-#include "include/doomtype.h"
-#include "include/i_system.h"
+#include "doomtype.h"
+#include "i_system.h"
 
-//#ifdef __GNUG__
-//#pragma implementation "m_fixed.h"
-//#endif
-#include "include/m_fixed.h"
+#include "m_fixed.h"
 
 
 

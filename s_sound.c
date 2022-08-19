@@ -34,15 +34,15 @@
 // killough 3/7/98: modified to allow arbitrary listeners in spy mode
 // killough 5/2/98: reindented, removed useless code, beautified
 
-#include "include/doomstat.h"
-#include "include/s_sound.h"
+#include "doomstat.h"
+#include "s_sound.h"
 
 //#include "i_sound.h"		// cosmito
-#include "include/l_sound_sdl.h"
+#include "l_sound_sdl.h"
 
-#include "include/r_main.h"
-#include "include/m_random.h"
-#include "include/w_wad.h"
+#include "r_main.h"
+#include "m_random.h"
+#include "w_wad.h"
 //#include "lprintf.h"   // cosmito
 
 #include <stdlib.h>

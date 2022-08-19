@@ -30,16 +30,16 @@
 #include <stdlib.h>
 
 
-#include "include/doomdef.h"
-#include "include/m_swap.h"
+#include "doomdef.h"
+#include "m_swap.h"
 
-#include "include/i_system.h"
-#include "include/z_zone.h"
-#include "include/w_wad.h"
+#include "i_system.h"
+#include "z_zone.h"
+#include "w_wad.h"
 
-#include "include/r_local.h"
+#include "r_local.h"
 
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 
 
@@ -984,6 +984,7 @@ void R_DrawMasked (void)
     if (!viewangleoffset)		
 	R_DrawPlayerSprites ();
 }
+
 
 
 

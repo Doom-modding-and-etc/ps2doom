@@ -22,13 +22,7 @@
 // static const chat rcsid[] = "$Id: m_bbox.c,v 1.1 1997/02/03 22:45:10 b1 Exp $";
 //-----------------------------------------------------------------------------
 
-
-
-
-//#ifdef __GNUG__
-//#pragma implementation "doomstat.h"
-//#endif
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 
 // Game Mode - identify IWAD as shareware, retail etc.
@@ -41,6 +35,7 @@ Language_t   language = english;
 
 // Set if homebrew PWAD stuff has been added.
 boolean	modifiedgame;
+
 
 
 

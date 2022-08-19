@@ -29,14 +29,14 @@
 #include <SDL/SDL_version.h>
 #include <stdio.h>
 
-#include "include/z_zone.h"
-#include "include/m_swap.h"
-#include "include/i_system.h"
-#include "include/i_sound.h"
-#include "include/m_argv.h"
-#include "include/m_misc.h"
-#include "include/w_wad.h"
-#include "include/doomdef.h"
+#include "z_zone.h"
+#include "m_swap.h"
+#include "i_system.h"
+#include "i_sound.h"
+#include "m_argv.h"
+#include "m_misc.h"
+#include "w_wad.h"
+#include "doomdef.h"
 
 
 
@@ -327,7 +327,7 @@ void I_SetChannels()
   // This table provides step widths for pitch parameters.
   // I fail to see that this is currently used.
   for (i=-128 ; i<128 ; i++)
-    steptablemid[i] = (int)(pow(2.0, (i/64.0))*65536.0);
+    steptablemid[i] = (int)(powf(2.0, (i/64.0))*65536.0);
   
   
   // Generates volume lookup tables

@@ -49,16 +49,16 @@
 #include <kernel.h>     //for GetThreadId 
 #include <mixer/wav.h>
 
-#include "include/modules.h"
-#include "include/elf_structure.h"
-#include "include/pad_support.h"
-#include "include/hdd.h"
+#include "modules.h"
+#include "elf_structure.h"
+#include "pad_support.h"
+#include "hdd.h"
 
-#include "include/doomdef.h"
-#include "include/m_argv.h"
-#include "include/d_main.h"
+#include "doomdef.h"
+#include "m_argv.h"
+#include "d_main.h"
 
-#include "include/w_wad.h"
+#include "w_wad.h"
 
 extern u8 usbd;
 extern u32 size_usbd;

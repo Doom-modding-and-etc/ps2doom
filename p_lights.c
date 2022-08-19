@@ -26,15 +26,15 @@
 
 
 
-#include "include/z_zone.h"
-#include "include/m_random.h"
+#include "z_zone.h"
+#include "m_random.h"
 
-#include "include/doomdef.h"
-#include "include/p_local.h"
+#include "doomdef.h"
+#include "p_local.h"
 
 
 // State.
-#include "include/r_state.h"
+#include "r_state.h"
 
 //
 // FIRELIGHT FLICKER
@@ -354,4 +354,5 @@ void P_SpawnGlowingLight(sector_t*	sector)
 
     sector->special = 0;
 }
+
 

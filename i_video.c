@@ -28,15 +28,15 @@
 
 #include <SDL.h>
 #include <SDL_keyboard.h>
-#include "include/m_swap.h"
-#include "include/doomstat.h"
-#include "include/i_system.h"
-#include "include/v_video.h"
-#include "include/m_argv.h"
-#include "include/d_main.h"
-#include "include/z_zone.h"
-#include "include/doomdef.h"
-#include "include/w_wad.h"
+#include "m_swap.h"
+#include "doomstat.h"
+#include "i_system.h"
+#include "v_video.h"
+#include "m_argv.h"
+#include "d_main.h"
+#include "z_zone.h"
+#include "doomdef.h"
+#include "w_wad.h"
 
 SDL_Surface *screen;
 

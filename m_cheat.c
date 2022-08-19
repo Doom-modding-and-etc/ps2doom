@@ -25,7 +25,7 @@
 
 
 
-#include "include/m_cheat.h"
+#include "m_cheat.h"
 
 //
 // CHEAT SEQUENCE PACKAGE
@@ -97,5 +97,6 @@ cht_GetParam
 	*buffer = 0;
 
 }
+
 
 

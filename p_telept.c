@@ -26,18 +26,18 @@
 
 
 
-#include "include/doomdef.h"
+#include "doomdef.h"
 
-#include "include/s_sound.h"
+#include "s_sound.h"
 
-#include "include/p_local.h"
+#include "p_local.h"
 
 
 // Data.
-#include "include/sounds.h"
+#include "sounds.h"
 
 // State.
-#include "include/r_state.h"
+#include "r_state.h"
 
 
 
@@ -129,4 +129,5 @@ EV_Teleport
     }
     return 0;
 }
+
 

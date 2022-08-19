@@ -24,12 +24,9 @@
 
 
 // We are referring to sprite numbers.
-#include "include/info.h"
+#include "info.h"
 
-//#ifdef __GNUG__
-//#pragma implementation "d_items.h"
-//#endif
-#include "include/d_items.h"
+#include "d_items.h"
 
 
 //
@@ -128,6 +125,7 @@ weaponinfo_t	weaponinfo[NUMWEAPONS] =
 	S_DSGUNFLASH1
     },	
 };
+
 
 
 

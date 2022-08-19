@@ -27,48 +27,48 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "include/doomdef.h"
-#include "include/doomstat.h"
+#include "doomdef.h"
+#include "doomstat.h"
 
-#include "include/z_zone.h"
-#include "include/f_finale.h"
-#include "include/m_argv.h"
-#include "include/m_misc.h"
-#include "include/m_menu.h"
-#include "include/m_random.h"
-#include "include/i_system.h"
+#include "z_zone.h"
+#include "f_finale.h"
+#include "m_argv.h"
+#include "m_misc.h"
+#include "m_menu.h"
+#include "m_random.h"
+#include "i_system.h"
 
-#include "include/p_setup.h"
-#include "include/p_saveg.h"
-#include "include/p_tick.h"
+#include "p_setup.h"
+#include "p_saveg.h"
+#include "p_tick.h"
 
-#include "include/d_main.h"
+#include "d_main.h"
 
-#include "include/wi_stuff.h"
-#include "include/hu_stuff.h"
-#include "include/st_stuff.h"
-#include "include/am_map.h"
+#include "wi_stuff.h"
+#include "hu_stuff.h"
+#include "st_stuff.h"
+#include "am_map.h"
 
 // Needs access to LFB.
-#include "include/v_video.h"
+#include "v_video.h"
 
-#include "include/w_wad.h"
+#include "w_wad.h"
 
-#include "include/p_local.h"
+#include "p_local.h"
 
-#include "include/s_sound.h"
+#include "s_sound.h"
 
 // Data.
-#include "include/dstrings.h"
-#include "include/sounds.h"
+#include "dstrings.h"
+#include "sounds.h"
 
 // SKY handling - still the wrong place.
-#include "include/r_data.h"
-#include "include/r_sky.h"
+#include "r_data.h"
+#include "r_sky.h"
 
-#include "include/p_pspr.h"     // cosmito
+#include "p_pspr.h"     // cosmito
 
-#include "include/g_game.h"
+#include "g_game.h"
 
 
 #define SAVEGAMESIZE	0x2c000

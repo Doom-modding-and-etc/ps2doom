@@ -34,28 +34,28 @@
 
 extern int access(char *file, int mode);
 
-#include "include/doomdef.h"
+#include "doomdef.h"
 
-#include "include/z_zone.h"
+#include "z_zone.h"
 
-#include "include/m_swap.h"
-#include "include/m_argv.h"
+#include "m_swap.h"
+#include "m_argv.h"
 
-#include "include/w_wad.h"
+#include "w_wad.h"
 
-#include "include/i_system.h"
-#include "include/i_video.h"
-#include "include/v_video.h"
+#include "i_system.h"
+#include "i_video.h"
+#include "v_video.h"
 
-#include "include/hu_stuff.h"
+#include "hu_stuff.h"
 
 // State.
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 // Data.
-#include "include/dstrings.h"
+#include "dstrings.h"
 
-#include "include/m_misc.h"
+#include "m_misc.h"
 
 //
 // M_DrawText

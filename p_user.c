@@ -28,12 +28,12 @@
 
 
 
-#include "include/doomdef.h"
-#include "include/d_event.h"
+#include "doomdef.h"
+#include "d_event.h"
 
-#include "include/p_local.h"
+#include "p_local.h"
 
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 
 

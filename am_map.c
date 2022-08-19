@@ -26,26 +26,26 @@
 #include <stdio.h>
 
 
-#include "include/z_zone.h"
-#include "include/doomdef.h"
-#include "include/st_stuff.h"
-#include "include/p_local.h"
-#include "include/w_wad.h"
+#include "z_zone.h"
+#include "doomdef.h"
+#include "st_stuff.h"
+#include "p_local.h"
+#include "w_wad.h"
 
-#include "include/m_cheat.h"
-#include "include/i_system.h"
+#include "m_cheat.h"
+#include "i_system.h"
 
 // Needs access to LFB.
-#include "include/v_video.h"
+#include "v_video.h"
 
 // State.
-#include "include/doomstat.h"
-#include "include/r_state.h"
+#include "doomstat.h"
+#include "r_state.h"
 
 // Data.
-#include "include/dstrings.h"
+#include "dstrings.h"
 
-#include "include/am_map.h"
+#include "am_map.h"
 
 
 // For use if I do walls with outsides/insides

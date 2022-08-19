@@ -30,16 +30,16 @@
 #include <SDL.h>
 #include <SDL_timer.h>
 
-#include "include/doomdef.h"
-#include "include/m_misc.h"
-#include "include/i_video.h"
+#include "doomdef.h"
+#include "m_misc.h"
+#include "i_video.h"
 
-#include "include/l_sound_sdl.h"
+#include "l_sound_sdl.h"
 
-#include "include/d_net.h"
-#include "include/g_game.h"
+#include "d_net.h"
+#include "g_game.h"
 
-#include "include/i_system.h"
+#include "i_system.h"
 
 
 

@@ -26,14 +26,14 @@
 
 
 
-#include "include/z_zone.h"
-#include "include/i_video.h"
-#include "include/v_video.h"
-#include "include/m_random.h"
+#include "z_zone.h"
+#include "i_video.h"
+#include "v_video.h"
+#include "m_random.h"
 
-#include "include/doomdef.h"
+#include "doomdef.h"
 
-#include "include/f_wipe.h"
+#include "f_wipe.h"
 
 //
 //                       SCREEN WIPE PACKAGE

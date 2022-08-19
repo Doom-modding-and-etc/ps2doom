@@ -29,37 +29,37 @@
 
 #include <stdio.h>
 
-#include "include/i_system.h"
-#include "include/i_video.h"
-#include "include/z_zone.h"
-#include "include/m_random.h"
-#include "include/w_wad.h"
+#include "i_system.h"
+#include "i_video.h"
+#include "z_zone.h"
+#include "m_random.h"
+#include "w_wad.h"
 
-#include "include/doomdef.h"
+#include "doomdef.h"
 
-#include "include/g_game.h"
+#include "g_game.h"
 
-#include "include/st_stuff.h"
-#include "include/st_lib.h"
-#include "include/r_local.h"
+#include "st_stuff.h"
+#include "st_lib.h"
+#include "r_local.h"
 
-#include "include/p_local.h"
-#include "include/p_inter.h"
+#include "p_local.h"
+#include "p_inter.h"
 
-#include "include/am_map.h"
-#include "include/m_cheat.h"
+#include "am_map.h"
+#include "m_cheat.h"
 
-#include "include/s_sound.h"
+#include "s_sound.h"
 
 // Needs access to LFB.
-#include "include/v_video.h"
+#include "v_video.h"
 
 // State.
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 // Data.
-#include "include/dstrings.h"
-#include "include/sounds.h"
+#include "dstrings.h"
+#include "sounds.h"
 
 //
 // STATUS BAR DATA

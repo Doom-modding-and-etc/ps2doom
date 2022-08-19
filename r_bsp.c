@@ -26,19 +26,19 @@
 
 
 
-#include "include/doomdef.h"
+#include "doomdef.h"
 
-#include "include/m_bbox.h"
+#include "m_bbox.h"
 
-#include "include/i_system.h"
+#include "i_system.h"
 
-#include "include/r_main.h"
-#include "include/r_plane.h"
-#include "include/r_things.h"
+#include "r_main.h"
+#include "r_plane.h"
+#include "r_things.h"
 
 // State.
-#include "include/doomstat.h"
-#include "include/r_state.h"
+#include "doomstat.h"
+#include "r_state.h"
 
 //#include "r_local.h"
 
@@ -576,5 +576,6 @@ void R_RenderBSPNode (int bspnum)
     if (R_CheckBBox (bsp->bbox[side^1]))	
 	R_RenderBSPNode (bsp->children[side^1]);
 }
+
 
 

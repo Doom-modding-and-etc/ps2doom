@@ -30,35 +30,35 @@
 #include <fcntl.h>
 #include <tamtypes.h>
 #include <kernel.h>
-#include "include/m_swap.h"
-#include "include/doomdef.h"
-#include "include/dstrings.h"
+#include "m_swap.h"
+#include "doomdef.h"
+#include "dstrings.h"
 
-#include "include/d_main.h"
+#include "d_main.h"
 
-#include "include/i_system.h"
-#include "include/i_video.h"
-#include "include/z_zone.h"
-#include "include/v_video.h"
-#include "include/w_wad.h"
+#include "i_system.h"
+#include "i_video.h"
+#include "z_zone.h"
+#include "v_video.h"
+#include "w_wad.h"
 
-#include "include/r_local.h"
+#include "r_local.h"
 
 
-#include "include/hu_stuff.h"
+#include "hu_stuff.h"
 
-#include "include/g_game.h"
+#include "g_game.h"
 
-#include "include/m_argv.h"
+#include "m_argv.h"
 
-#include "include/s_sound.h"
+#include "s_sound.h"
 
-#include "include/doomstat.h"
+#include "doomstat.h"
 
 // Data.
-#include "include/sounds.h"
+#include "sounds.h"
 
-#include "include/m_menu.h"
+#include "m_menu.h"
 
 
 

@@ -35,8 +35,8 @@
 
 // killough 5/3/98: reformatted
 
-#include "include/doomtype.h"
-#include "include/sounds.h"
+#include "doomtype.h"
+#include "sounds.h"
 
 /*****************************
 Information about all the music

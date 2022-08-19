@@ -54,19 +54,16 @@
 #include <stdio.h>
 #include <errno.h>
 #include <ps2ip.h>
-#include "include/i_ps2net.h"
+#include "i_ps2net.h"
 #define IPPORT_USERRESERVED	1024 // ??
-#include "include/i_system.h"
-#include "include/d_event.h"
-#include "include/d_net.h"
-#include "include/m_argv.h"
+#include "i_system.h"
+#include "d_event.h"
+#include "d_net.h"
+#include "m_argv.h"
 
-#include "include/doomstat.h"
+#include "doomstat.h"
 
-//#ifdef __GNUG__
-//#pragma implementation "i_net.h"
-//#endif
-#include "include/i_net.h"
+#include "i_net.h"
 
 
 
@@ -395,4 +392,5 @@ void I_NetCmd (void)
     else
 	I_Error ("Bad net cmd: %i\n",doomcom->command);
 }
+
 

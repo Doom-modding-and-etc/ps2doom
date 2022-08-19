@@ -33,13 +33,13 @@
 #include <math.h>
 
 
-#include "include/doomdef.h"
-#include "include/d_net.h"
+#include "doomdef.h"
+#include "d_net.h"
 
-#include "include/m_bbox.h"
+#include "m_bbox.h"
 
-#include "include/r_local.h"
-#include "include/r_sky.h"
+#include "r_local.h"
+#include "r_sky.h"
 
 
 

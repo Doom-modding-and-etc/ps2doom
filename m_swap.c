@@ -25,10 +25,7 @@
 
 
 
-//#ifdef __GNUG__
-//#pragma implementation "m_swap.h"
-//#endif
-#include "include/m_swap.h"
+#include "m_swap.h"
 
 
 // Swap 16bit, that is, MSB and LSB byte.
@@ -47,5 +44,6 @@ unsigned long SwapLONG( unsigned long x)
 	| ((x<<8) & 0xff0000)
 	| (x<<24);
 }
+
 
 

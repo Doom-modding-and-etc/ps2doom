@@ -24,13 +24,13 @@
 
 
 
-#include "include/i_system.h"
-#include "include/z_zone.h"
-#include "include/p_local.h"
+#include "i_system.h"
+#include "z_zone.h"
+#include "p_local.h"
 
 // State.
-#include "include/doomstat.h"
-#include "include/r_state.h"
+#include "doomstat.h"
+#include "r_state.h"
 
 byte*		save_p;
 
@@ -583,4 +583,5 @@ void P_UnArchiveSpecials (void)
     }
 
 }
+
 
