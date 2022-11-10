@@ -154,9 +154,13 @@ int 		eventtail;
 //
 void D_PostEvent (event_t* ev)
 {
+#ifdef ADILSON 
     events[eventhead] = *ev;
     eventhead = MAXEVENTS-1;
     ++eventhead;
+#else
+eventhead = (++eventhead)&(MAXEVENTS-1);
+#endif
 }
 
 
@@ -172,8 +176,11 @@ void D_ProcessEvents (void)
     if ( ( gamemode == commercial )
 	 && (W_CheckNumForName("map01")<0) )
       return;
-	
+#ifdef ADILSON
     for (; eventtail != eventhead ; eventtail = MAXEVENTS-1 ) 
+#else
+    for ( ; eventtail != eventhead ; eventtail = (++eventtail)&(MAXEVENTS-1) )	
+#endif
     {
 	 ev = &events[eventtail];
 	 if (M_Responder (ev))

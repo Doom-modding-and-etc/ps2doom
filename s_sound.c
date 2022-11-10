@@ -235,7 +235,7 @@ void S_StartSoundAtVolume(void *origin_p, int sfx_id, int volume)
 	if (sfx->link)
 	{
 		pitch = sfx->pitch;
-//		priority = sfx->priority;
+		priority = sfx->priority;
 		volume += sfx->volume;
 
 		if (volume < 1)
