@@ -70,8 +70,8 @@ extern u32 size_usbhdfsd;
 extern u8 usbmass_bd_irx;
 extern u32 size_usbmass_bd_irx;
 
-extern u8 SJPCM;
-extern u32 size_SJPCM;
+//extern u8 SJPCM;
+//extern u32 size_SJPCM;
 
 extern u8 sio2man_irx;
 extern u32 size_sio2man_irx;
@@ -594,7 +594,7 @@ int main( int argc, char**	argv )
     //Load embedded modules
 
     // SJPCM
-    SifExecModuleBuffer(SJPCM, size_SJPCM, 0, NULL, &ret);
+    ///SifExecModuleBuffer(SJPCM, size_SJPCM, 0, NULL, &ret);
     
     // USB mass support
     SifExecModuleBuffer(usbd, size_usbd, 0, NULL, &ret);
@@ -857,10 +857,10 @@ int main( int argc, char**	argv )
     }
 
 
-    SjPCM_Init(1);		// sync mode
+    //SjPCM_Init(1);		// sync mode
 
-    printf("SjPCM_Setvol ...\n");
-    SjPCM_Setvol(0x3fff);
+    //printf("SjPCM_Setvol ...\n");
+    //SjPCM_Setvol(0x3fff);
 
     ChangeThreadPriority ( GetThreadId (), 42 );
     Mixer_Init();       // TBD : arg number channels
@@ -893,5 +893,5 @@ int main( int argc, char**	argv )
     **                                                     **
     *********************************************************
     *********************************************************/ 
-   Display_mode();
+   //Display_mode();
 } 
