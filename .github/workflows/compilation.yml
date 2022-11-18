@@ -26,12 +26,12 @@ jobs:
          git clone https://github.com/Doom-modding-and-etc/cosmix.git && cd cosmix
          make all 
 
-    - name: change user permission to me 
+    - name: change user permission for me 
       run: |
         git config --global --add safe.directory /__w/ps2doom/ps2doom
 
     - name: git checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - run: | 
          git fetch --prune --unshallow
 
@@ -44,7 +44,7 @@ jobs:
 
     - name: Upload artifacts
       if: ${{ success() }}
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ps2doom-${{ steps.slug.outputs.sha8 }}
         path: bin
